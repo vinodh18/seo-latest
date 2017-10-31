@@ -1,0 +1,67 @@
+  <div class="col-md-12">
+    <div class="portlet portlet-bordered" ng-init="initKeyword()">
+          <div class="portlet-title">
+            <div class="caption caption-red">
+              <i class="glyphicon glyphicon-tasks"></i>
+              <span class="caption-subject text-uppercase">Create New Competitor</span>
+            </div>
+          </div>
+
+      <form class="form-horizontal form-validation" method="post" ng-submit="" name="createFrom" action="#" enctype="multipart/form-data"  onsubmit="return false;">
+           <!-- <a href="javascript:void(0)" name="fname" ng-click="addNew()" >
+                <i class="glyphicon glyphicon-plus text-info pull-right" style="margin-top: -18px;margin-bottom: 20px;"></i>
+              </a> -->
+
+      	<div class="portlet-body">
+      	  <div class="portlet portlet-bordered" ng-repeat="comp in competitor">
+      	  	<span ng-show="competitor.length > 1">
+              <a href="javascript:void(0)" name="fname" ng-click="remove($index)">
+      	  		   <i class="glyphicon glyphicon-trash text-info pull-right" style="margin-top: -18px;margin-bottom: 20px;color: #A80309;margin-right: -15px;" ></i>
+              </a>
+
+      	  		
+
+      	  	</span>
+          	<div class="form-group row">
+          		<div class="col-md-12">
+          		  <div class="col-md-2">
+      						<label>Competitor Name: </label>
+          				</div>
+          				<div class="col-md-10">
+          					<input type="text" name="name" class="form-control" ng-model="comp.name" placeholder="Competitor Name">
+          				</div>
+	      		  </div>
+	      	  </div>
+
+          <div class="form-group row">
+      			<div class="col-md-12">
+      				
+      					<div class="col-md-2">
+	      					<label style="margin-left: 15px;">Domain Name: </label>
+      					</div>
+          				<div class="col-md-10">
+      						<input type="text" name="url" class="form-control" ng-model="comp.url" placeholder="Domain Name">
+      					</div>
+					   </div>
+			    </div>
+
+       
+		  </div>
+      <span class="pull-right" style="margin-top: -36px;margin-bottom: 35px;margin-right: -10px;">
+       <a href="javascript:void(0)" class="fa fa-plus-circle fa-2x text-info" ng-click="addNew()" style="text-decoration: none;">
+      </a>
+    </span>
+
+		</div>
+    
+
+		<div class="row">
+			<div class="col-md-12">
+				<button class="btn btn-default btn-sm  pull-right"  type="submit">Reset</button>
+				<button class="btn btn-primary btn-sm  pull-right"  type="submit">Save</button>	
+			</div>
+		</div>
+	</form>
+
+      </div>
+  </div>

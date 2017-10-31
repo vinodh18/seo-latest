@@ -1,0 +1,86 @@
+<div ng-init="initCrawling()">
+
+<div class="panel panel-default">
+  <div class="panel-heading">Web Traffic Analysis</div>
+  <div class="panel-body">
+   <div class="row">
+        <div class="col-sm-6">
+          <!-- Total Records: {{total}} -->
+        </div>
+
+        <div class="col-sm-6">
+            <div class="pull-right">
+              <div class="col-md-4">
+                <label style="margin-top: 5px;">Show</label> 
+            </div>
+
+            <div class="col-md-8">
+                
+               <select class="form-control" ng-model="pageSize" 
+                ng-options="x for x in pagelmt">
+                </select> 
+
+                
+            </div>
+            </div>
+        </div>
+    </div>
+      
+        <table class="table table-bordered table-hover table-responsive">
+          <thead>
+            <tr>
+              <th> <input type="search" class="form-control input-sm" ng-model="search.crawlAddress" placeholder="" aria-controls="dataTables-example"></th>
+              <th><input type="search" class="form-control input-sm" ng-model="search.responseCode" placeholder="" aria-controls="dataTables-example"></th>
+              <th><input type="search" class="form-control input-sm" ng-model="search.latency" placeholder="" aria-controls="dataTables-example"></th>
+              <th><input type="search" class="form-control input-sm" ng-model="search.metaDescription" placeholder="" aria-controls="dataTables-example"></th>
+              <th><input type="search" class="form-control input-sm" ng-model="search.metaTitle" placeholder="" aria-controls="dataTables-example"></th>
+              <th><input type="search" class="form-control input-sm" ng-model="search.missingKeyword" placeholder="" aria-controls="dataTables-example"></th>
+              <th><input type="search" class="form-control input-sm" ng-model="search.issueOverview" placeholder="" aria-controls="dataTables-example"></th>
+              
+            </tr>
+
+            <tr>
+              <th style="width: 322px;">URL</th>
+              <th>Status</th>
+              <th>Latency (m/s)</th>
+              <th>Desc Meta</th>
+              <th>Title</th>
+              <th>Missing Keywords</th>
+              <th>Issues Overview</th>
+            </tr>
+          </thead>
+         
+          <!-- <tbody ng-repeat="craw in cradata | filter: search | filter:search as results"> -->
+           <tbody>
+            <tr dir-paginate="craw in cradata | filter:q | itemsPerPage: pageSize | filter: search| filter: search as results " current-page="currentPage" pagination-id="crwdesktopPag">
+              <td class="tdw"><a ng-href="http://{{craw.url}}" target="_blank">{{craw.crawlAddress}}</a></td>
+              <td>{{craw.responseCode}}</td>
+              <td>{{craw.latency}}</td>
+              <td>{{craw.metaDescription}}</td>
+              <td>{{craw.metaTitle}}</td>
+              <td>{{craw.missingKeyword}}</td>
+              <td>{{craw.issueOverview}}</td>
+              
+            </tr>
+            
+          </tbody>
+        </table>
+      
+
+        <div class="row">
+            <div class="col-md-6">
+                <span>Showing 1 to {{url_data.length}} of 50 entries</span>
+            </div>
+
+            <div class="col-md-6">
+             <div class="pull-right" style="margin-top: -22px;">
+                
+               <dir-pagination-controls boundary-links="true" on-page-change="query(newPageNumber)"  max-size = '10' template-url="../app/views/directives/dirPagination.tpl.html"pagination-id="crwdesktopPag"></dir-pagination-controls>
+              
+            </div>
+
+            </div>
+        </div>
+   </div>
+  </div>
+ </div>

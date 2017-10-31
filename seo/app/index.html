@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="description" content="">
+     <meta name="author" content="">
+
+     <link rel="icon" href="../images/verizon/favicon.ico">
+
+    <title>VZW SEO MONITORING</title>
+     
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build :css(.) styles/vendor.css -->
+    <!-- bower :css -->
+    <!-- <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"> -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link href="../app/verizon/vzbs-angular/vendor/vzbootstrap/styles/bootstrap.min.css" rel="stylesheet">
+     <link href="../app/verizon/vzbs-angular/vendor/vzbootstrap/styles/vzbootstrap.min.css" rel="stylesheet">
+     <link href="../app/verizon/vzbs-angular/assets/styles/vzbsangular-styles.min.css" rel="stylesheet">
+     <link href="../bower_components/angular-bootstrap/ui-bootstrap-csp.css" rel="stylesheet">
+     <link href="../bower_components/angular-dialog/dist/simple-angular-dialog.css" rel="stylesheet">
+     <link rel="stylesheet" href="../app/styles/styles.css">
+
+     <!-- Bower component css -->
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap-daterangepicker/daterangepicker-bs3.css">
+     <link href="../bower_components/angularjs-datepicker/src/css/angular-datepicker.css" rel="stylesheet" type="text/css" />
+    <link href="../bower_components/angular-xeditable/css/xeditable.css" rel="stylesheet" />
+    <link href="../bower_components/angular-confirm/dist/angular-confirm.min.css" rel="stylesheet" />
+    <!-- end bower -->
+    
+
+  </head>
+  <body ng-app="seoApp">
+    
+   <ng-include src="'shared/header/header.template.html'"></ng-include>
+<!-- <ng-include src="'components/shared/header/header.template.html'"></ng-include> -->
+
+      <div class="container whitepage">
+
+      <!-- Primary Navigation section -->
+      <div id="primary-nav">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="page-header">
+             <!--  <h1>Dashboard</h1> -->
+              <div ncy-breadcrumb></div>
+            </div>
+          </div>
+        </div>
+      </div>
+           
+      <div class="row">
+         
+      <!-- Main Content Starts -->
+      <div class="col-md-12">
+      
+        <!-- <div ng-view=""></div> -->
+         <ui-view></ui-view>
+      </div>
+      <!-- Main Content Ends Here -->
+
+    </div>
+
+   </div>
+ 
+    <div class="footer">
+        <ng-include src="'../app/shared/footer/footer.template.html'"></ng-include>
+     </div>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower :js -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="../bower_components/angular-resource/angular-resource.js"></script>
+
+    <!-- Verizon Js Files -->
+   <script src="../app/shared/utils/utils.module.js"></script>
+   <script src="../app/shared/utils/utils.js"></script>
+    <script src="../app/verizon/vzbootstrap/vzbootstrap.min.js"></script>
+    <script src="../app/verizon/vzbootstrap/vzbootstrap-main.min.js"></script>
+    <!-- Custom Js Files -->
+    <!-- Chart Js Files -->
+    <script src="../bower_components/chart.js/dist/Chart.min.js"></script>
+    <script src="../bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="../bower_components/moment/moment.js"></script>
+    <script src="../bower_components/angular-moment/angular-moment.js"></script>
+    <script src="../bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/ng-bs-daterangepicker/src/ng-bs-daterangepicker.js"></script>.
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../bower_components/angularjs-datepicker/src/js/angular-datepicker.js"></script>
+
+    <script src='../bower_components/ng-auto-scroll/ng-infinite-scroll.min.js'></script>
+    <script src='../bower_components/tagged-infinite-scroll/src/taggedInfiniteScroll.js'>
+    </script>
+    <!-- End Chart Js Files -->
+
+    <!-- text Editable -->
+    <script src='../bower_components/angular-xeditable/js/xeditable.js'></script>
+    <script src="../bower_components/angular-dialog/dist/simple-angular-dialog.js">
+    </script>
+    <script type="text/javascript" src="../bower_components/lodash/dist/lodash.js"></script>
+    <script type="text/javascript" src="../bower_components/underscore/underscore.js"></script>
+    <script type="text/javascript" src="../bower_components/angular-confirm/dist/angular-confirm.min.js"></script>
+    <script src="../bower_components/excelExport/alasql.min.js"></script>
+    <script src="../bower_components/excelExport/xlsx.core.min.js"></script>
+    <!-- Custom js Files -->
+   
+
+
+    <!-- end bower -->
+
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="../app/scripts/controllers/main.js"></script>
+        <script src="../app/scripts/controllers/about.js"></script>
+        <!-- endbuild -->
+
+        <!--Custom Direcitves -->
+        <script src="../app/scripts/directives/dirPagination.js"></script>
+        <script src="../app/scripts/directives/fileupload.js"></script>
+        <!-- End Custom Diective -->
+</body>
+</html>

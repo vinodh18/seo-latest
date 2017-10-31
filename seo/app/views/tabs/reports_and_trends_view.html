@@ -1,0 +1,86 @@
+ <div ng-include="'../app/views/dashboard.html'"></div>
+ <div class="row">
+    
+        <div class="col-md-12">  
+             <h4>View Currently Selected = wwww.abc.com</h4>
+              <div class="col-md-11"  ng-repeat="personalDetail in personalDetails">
+                <div class="row">
+                   <div class="col-md-2">
+                        <label>Rule#:{{$index + 1}} 
+                           <!-- <a href="#tab5" aria-controls="profile" role="tab" data-toggle="tab">
+                            <i class="glyphicon glyphicon-pencil text-info"></i>
+                          </a> -->
+                            <!-- <a href="#tab5" role="button" class="btn btn-default repo"  aria-controls="profile" role="tab" data-toggle="tab">Reports and Trends</a> -->
+
+                             <!-- <a href="" ng-click="remove($index)" > -->
+                              <!-- <a href=""><i class="glyphicon glyphicon-trash text-danger">
+                             </i></a> -->
+                           
+                        </label>
+
+                   </div>
+
+                    <div class="col-md-3">
+                     <div class="form-group" style="background: #f2dede; padding: 20px; margin-bottom: 30px;">
+                        <label>Export</label>
+                        <select class="form-control" ng-model="personalDetail.fname" disabled>
+                            <option value="">select Url</option>
+                            <option>export data for this URL</option>
+                            <option>export data for all URLs</option>                                                
+                        </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                     <div class="form-group" style="background: #f2dede; padding: 20px; margin-bottom: 30px;">
+                        <label>Operator</label>
+                        <select class="form-control" ng-model="personalDetail.lname" disabled>
+                            <option value="">select Operator</option>
+                            <option>></option>
+                            <option><</option> 
+                            <option>>=</option>
+                            <option><=</option>                                              
+                        </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                     <div class="form-group" style="background: #f2dede; padding: 20px; margin-bottom: 30px;">
+                        <label>Enter Name</label>
+                        <input type="text" class="form-control" name="fname" placeholder="Fill the Name " ng-model="personalDetail.email" disabled>
+                        </div>
+                    </div>
+
+                       <a href="#tab5" aria-controls="profile" role="tab" data-toggle="tab">
+                            <i class="glyphicon glyphicon-pencil text-info"></i>
+                          </a> 
+                          
+                    </div>
+                  </div>
+                
+                    <div class="col-md-1">
+                       <!--  <span class="pull-right" ng-hide="personalDetails == 0">
+                        <button name="fname" class="btn btn-xs btncs btncol" ng-click="addNew()" disabled>Add
+                        </button>
+                    </span>
+
+                    <span ng-show="personalDetails == 0">
+                        <button name="fname" class="btn btn-xs btncol" ng-click="addNew()" disabled>Add
+                        </button>
+                    </span> -->
+
+                    </div> 
+                </div>
+            </div>
+           
+            
+            <div class="row">
+              <div  ng-hide="personalDetails == 0">
+                <div class="col-md-12 text-right sav">
+                    <a class="btn btn-default btn-sm" ui-sref="/" disabled>Cancel</a>
+                   <!--  <button class="btn btn-primary btn-sm" ng-if="$ctrl.submitted && $ctrl.showLoading" disabled><i class="glyphicon glyphicon-refresh fa-spin"></i> Saving...</button> -->
+                    <button class="btn btn-primary btn-sm" type="submit" disabled>Save</button>
+                </div>
+              </div>
+           </div>
+           

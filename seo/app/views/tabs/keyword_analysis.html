@@ -1,0 +1,169 @@
+<div class="row">
+    <div class="col-md-8">
+      
+      <!-- <div class="panel panel-default" ng-init="initKeyword()">
+        <div class="panel-heading">Web Traffic Analysis</div> -->
+        <div class="portlet portlet-bordered" ng-init="initKeyword()">
+          <div class="portlet-title">
+            <div class="caption caption-red">
+              <i class="glyphicon glyphicon-tasks"></i>
+              <span class="caption-subject text-uppercase">Keyword Analysis</span>
+            </div>
+          </div>
+
+           <!-- <span class="pull-right plus-al" style="margin-top: -94px; margin-right: -21px;">
+              <a href="javascript:void(0)" class="fa fa-plus-circle fa-3x text-info" style="text-decoration: none;">
+              </a>
+           </span>
+ -->
+           <span class="pull-right plus-al" style="margin-top: -60px; margin-right: 0px;">
+                
+              <!-- <buton type="button" class="btn btn-danger btn-sm">
+                <a ui-sref="create" style="color: white;">Create Competitor</a></button> -->
+                <button ng-click="exportToExcel()" class="btn btn-success btn-sm">
+                  <i class="fa fa-download"></i>&nbsp;Excel</button>
+           </span>
+
+         <div class="portlet-body">
+         
+          <!-- <div class="clearfix">
+              <span class="vz-loading-gif top-9" ng-show="$ctrl.showLoading"><i class="glyphicon glyphicon-refresh fa-spin"></i> Loading..</span>
+                       
+            </div> -->
+
+           <div class="row">
+              <div class="col-sm-6">
+               <!--  Total Records: {{results.length}} -->
+              </div>
+
+              <div class="col-sm-6">
+                  <div class="pull-right">
+                    <div class="col-md-4">
+                      <label style="margin-top: 5px;">Show</label> 
+                  </div>
+                  
+                  <div class="col-md-8">
+                      <select class="form-control" ng-model="pageSize" 
+                       ng-options="x for x in pagelmt">
+                     </select> 
+                  </div>
+                  </div>
+              </div>
+          </div>
+            <!-- keyword Default Table -->
+            <div ng-include="'../app/views/tabs/keyword_tabs/keyword_load.html'"></div>
+            <!-- End -->
+             
+         </div>
+        </div>
+    </div>
+
+    <!-- File Uploding Part  -->
+      <div class="col-md-4">
+        <div class="alert alert-danger clearfix" role="alert">
+          
+            <form name="ruleForm" action="#" ng-submit="initDateAna()" method="post" enctype="multipart/form-data" class="form-horizontal form-validation" onsubmit="return false;">
+
+                  
+                 <div class="row">
+                  <div class="col-md-12 margin-bottom-20" >
+                    <div class="col-md-6">
+                     <br>   <i class="fa fa-calendar"></i>
+                        <label>Start Date</label>
+                      
+                        <datepicker date-format="yyyy-MM-dd" selector="form-control" ng-class="{pos: loader == true}">
+                          <div class="input-group">
+                           
+                              <input class="form-control" ng-model="analysis.startdate" placeholder="Choose a date"/>
+                              
+                              
+                          </div>
+                      </datepicker>
+                    </div>
+
+                    <div class="col-md-6">
+                     <br><i class="fa fa-calendar"></i>
+                        <label>End Date</label>
+                        <!-- <input type="date" class="form-control"> -->
+                        <datepicker date-format="yyyy-MM-dd" selector="form-control" ng-class="{pos: loader == true}">
+                          <div class="input-group">
+                              <input class="form-control" ng-model="analysis.enddate" placeholder="Choose a date"/>
+                              </span>
+                          </div>
+                      </datepicker>
+                    </div>
+                  </div>
+                </div>
+                <div class="margin-bottom-10 hed-wdth">
+                    <button type="submit" class="btn btn-danger btn-sm">Run the analysis</button>
+                </div>
+              </form>
+
+                <!-- File Uploading -->
+                <form name="ruleForm" action="#" ng-submit="initRunAanlysis(fileContent)" method="post" enctype="multipart/form-data" class="form-horizontal form-validation" onsubmit="return false;">
+
+                <div class="col-md-12 margin-bottom-20 hed-wdth" style="margin-top: 20px;">
+                  <i class="fa fa-upload" style="margin-left: -30px;"></i>
+                  <div class="upl">
+                  <div class="col-md-6">
+                         <input type="file" file-reader="fileContent" ng-model="fileContent"/>
+                       </div>
+                    
+                      <div class="col-md-6">
+                        <button type="submit" class="btn btn-danger btn-sm"
+                        style="margin-left: 12px; margin-top: -13px;">Submit</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                 
+            
+                <br>
+                <div style="border: 1px solid #ccc; padding: 100px 0px 65px; background: #fff;margin-top: 40px; padding: 32px 11px 26px 15px;margin-top: 51px;">
+                  <div style="margin-top:-130px;width: 310px; height: 240px; overflow: auto;
+                    overflow-x: hidden;">
+                    <div class="row">
+                      
+
+
+                      <div ng-show="loader" class="load-alg">
+                          <div style="margin-top: 10%;">
+                            <img src="./images/spinner.gif"></div>
+                      </div>
+                      <div class="col-md-12 margin-bottom-10" ng-repeat="anlis in daterangeana">
+                      <a href="#" ng-click="keywordtabs(anlis)">{{anlis.analysisId}}</a>
+                     <!--  <span style="float: right;">{{anlis.analysisDate}}</span> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+   <!-- <span ng-repeat="crawinner in craw.urlSerp">
+                        <a href="" ng-if="crawinner.Urlcode == 'vz'">
+                          <serp-details limit="{{crawinner.serp}}" obj-val="{{craw}}"></serp-details>
+                        </a>
+                      </span> -->
+<style type="text/css">
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.pos {
+  position: sticky;
+}
+</style>

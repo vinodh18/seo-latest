@@ -1,0 +1,104 @@
+<div ng-init="initUrl()">
+
+<div class="panel panel-default">
+  <div class="panel-heading">Web Traffic Analysis</div>
+  <div class="panel-body">
+   <div class="row">
+        <div class="col-sm-6">
+         <!--  Total Records: {{results.length}} -->
+        </div>
+
+        <div class="col-sm-6">
+            <div class="pull-right">
+              <div class="col-md-4">
+                <label style="margin-top: 5px;">Show</label> 
+            </div>
+           
+            <div class="col-md-8">
+                <select class="form-control" ng-model="pageSize" 
+                ng-options="x for x in pagelmt">
+                </select> 
+            </div>
+          </div>
+        </div>
+    </div>
+    
+  <div class="table-container">
+        <table class="table table-hover table-striped table-rwd table-bordered">
+          <!-- style="table-layout:fixed;" -->
+          <thead>
+             <tr>
+              <th> <input type="search" class="form-control input-sm" ng-model="search.seoUrlMaster.urlAddress" placeholder="" aria-controls="dataTables-example"></th>
+
+              <th><input type="search" class="form-control input-sm" ng-model="search.visits" placeholder="" aria-controls="dataTables-example"></th>
+
+              <th><input type="search" class="form-control input-sm" ng-model="search.uniqueVisits" placeholder="" aria-controls="dataTables-example"></th>
+
+              <th><input type="search" class="form-control input-sm" ng-model="search.livesSession" placeholder="" aria-controls="dataTables-example"></th>
+
+              <th><input type="search" class="form-control input-sm" ng-model="search.clicksOrganicSrch" placeholder="" aria-controls="dataTables-example"></th>
+
+              <th><input type="search" class="form-control input-sm" ng-model="search.clickAdwords" placeholder="" aria-controls="dataTables-example"></th>
+
+              <th><input type="search" class="form-control input-sm" ng-model="search.google_search" placeholder="" aria-controls="dataTables-example"></th>
+
+              <th><input type="search" class="form-control input-sm" ng-model="search.backlink" placeholder="" aria-controls="dataTables-example"></th>
+              <th><input type="search" class="form-control input-sm" ng-model="search.hot_keywords" placeholder="" aria-controls="dataTables-example"></th>
+            </tr>
+
+           
+            <tr>
+              <th ng-show="!dateShites" class="filterSort pointer tdw" ng-click="order('url')" style="width: 322px;">URL
+                <!-- <span class="sortorder pointer"
+                 ng-show="dateAscDsc === 'url'"
+                ng-class="{reverse:reverse}">
+              </span> -->
+              </th>
+
+              <th>Visits</th>
+              <th>Unique Visits</th>
+              <th>Current live sessions</th>
+              <th>Clicks from organic search</th>
+              <th>Clicks from Adwords</th>
+              <th>Impressions on Google search</th>
+              <th>Backlinks</th>
+              <th>Hot Keywords</th>
+            </tr>
+          </thead>
+          
+          <tbody>
+            
+            <tr dir-paginate="spec in url_data | filter:q | itemsPerPage: pageSize | filter: search | filter:search as results " current-page="currentPage" pagination-id="desktopPag">
+              
+              <td class="tdw"><a ng-href="http://{{spec.url}}" target="_blank">{{spec.seoUrlMaster.urlAddress}} </a></td>
+              <td>{{spec.visits}}</td>
+              <td>{{spec.uniqueVisits}}</td>
+              <td>{{spec.livesSession}}</td>
+              <td>{{spec.clicksOrganicSrch}}</td>
+              <td>{{spec.clickAdwords}}</td>
+              <td>{{spec.google_search}}</td>
+              <td>{{spec.backlink}}</td>
+              <td>{{spec.hot_keywords}}</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <span>Showing 1 to {{url_data.length}} of {{Urltotal}} entries</span>
+            </div>
+
+            <div class="col-md-6">
+             <div class="pull-right" style="margin-top: -22px;">
+                <dir-pagination-controls boundary-links="true" on-page-change="query(newPageNumber)"  max-size = '10' template-url="../app/views/directives/dirPagination.tpl.html"pagination-id="desktopPag"></dir-pagination-controls>
+            </div>
+
+            </div>
+        </div>
+
+
+   </div>
+  </div>
+ </div>

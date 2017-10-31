@@ -1,0 +1,63 @@
+<div class="row">
+      <div class="col-md-12">
+        <!-- BEGIN Portlet PORTLET-->
+        <div class="portlet">
+          <div class="portlet-title">
+            <div class="caption caption-red">
+              <i class="glyphicon glyphicon-tasks"></i>
+              <span class="caption-subject text-uppercase">Behind Competitors</span>
+	         </div>
+			
+			<div class="pull-right">
+      			<a href="#">
+      				<i class="glyphicon glyphicon-remove" style="color:#CD040B" ng-click="cancel()"></i>
+      			</a>
+  	  		</div>
+          </div>
+         	 
+          <div class="portlet-body">
+            
+             <!-- Tables -->
+            <div class="clearfix">
+             
+             <!--  <span class="vz-loading-gif top-9" ng-show="$ctrl.showLoading"><i class="glyphicon glyphicon-refresh fa-spin"></i> Loading..</span> -->
+              
+              <div><b> Keyword:</b> {{key}}</div>
+              <div><b> View url:</b> {{vzurl}}</div>
+              <div><b> Postion:</b> {{position}}</div>
+           
+			    <table class="table table-bordered table-hover table-responsive container-fluid dashboardTable">
+			        <thead class ="tableHeading">
+			          <tr>
+			         	 <th>COMPETITORS URL</th>
+			          	 <th>COMPETITORS SERP</th>
+                   <th>DIFFERENCE</th>
+					  </tr> 
+			        </thead>
+			   
+			        <tbody ng-repeat="crawinner in users.urlSerp" ng-if="bhd > 0">
+			        	<tr ng-if="crawinner.urlCode == 'nvz' && crawinner.serp > position">
+			        		    <td>{{crawinner.url}}</td>
+			                <td>{{crawinner.serp}}</td>
+                      <td>{{crawinner.serp - position}}</td>
+			            </tr>
+			        </tbody>
+              
+             <tbody ng-if="bhd == 0">
+                <tr>
+                   <td colspan = '11'>
+                     <div align="center">There is no Behind Records Found</div>
+                   </td>
+                </tr>
+            </tbody>
+
+			    </table>
+			    
+            </div>
+         
+          </div>
+        </div>
+        <!-- END Portlet PORTLET-->
+      </div>
+    
+    </div>

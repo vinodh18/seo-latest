@@ -1,0 +1,45 @@
+<div class="row">
+      <div class="col-md-12">
+        <!-- BEGIN Portlet PORTLET-->
+        <div class="portlet">
+          <div class="portlet-title">
+            <div class="caption caption-red">
+              <i class="fa fa-area-chart" aria-hidden="true"></i>
+              <span class="caption-subject text-uppercase">Keyword trend</span>
+	         </div>
+			
+			    <div class="pull-right">
+      			<a href="#">
+      				<i class="glyphicon glyphicon-remove" style="color:#CD040B" ng-click="cancel()"></i>
+      			</a>
+  	  		</div>
+        </div>
+         	 
+          <div class="portlet-body">
+            
+            <div ng-init="chart()">
+        
+                <span><strong>Position</strong></span>
+                    <div id="morris-area-chart"></div>                            
+                                
+                    <canvas id="line" class="chart chart-line" chart-data="data"
+                    chart-labels="labels" chart-series="series" chart-options="options"
+                    chart-dataset-override="datasetOverride" chart-click="onClick">
+                    </canvas>
+                <div class="pull-right">
+                  <span>
+                    
+                      <i class="fa fa-square" style="color:#E0757B" aria-hidden="true"><span style="color:black"><b>Verizon</b><span></i>
+                      <i class="fa fa-square" style="color:#AFCBD9" aria-hidden="true"><span style="color:black"><b>Ipad</b><span></i>
+                      <i class="fa fa-square" style="color:#E2E9ED" aria-hidden="true"><span style="color:black"><b>Ipad Touch</b></span></i>
+                  </span>
+                </div>
+               
+            </div>
+         
+          </div>
+        </div>
+        <!-- END Portlet PORTLET-->
+      </div>
+    
+    </div>

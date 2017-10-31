@@ -1,0 +1,315 @@
+ <div class="portlet portlet-bordered">
+   <div class="portlet-title">
+    <div class="caption caption-red">
+       <i class="glyphicon glyphicon-tasks"></i>
+       <span class="caption-subject text-uppercase">Reports and Trends</span>
+     </div>
+    </div>
+
+  <div class="portlet-body">
+    <div ng-init="initAddRule()">
+   
+    <form name="ruleForm" action="#" ng-submit = "initCreateRule()" method="post" enctype="multipart/form-data" class="form-horizontal form-validation" onsubmit="return false;">
+
+
+      <div class="row">
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-1">
+              <span class="caption caption-red text-uppercase" style="padding-top:10px;">
+                <label class="caption-subject text-uppercase">For</label>
+              </span>
+            </div>
+            <div class="col-md-11">
+              <input type="text" id="main-search-with" ng-model="item.url" class="form-control" placeholder="Search...">
+            </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="col-md-2">
+              <span class="caption text-uppercase" style="padding-top:10px;">
+                <label class="caption-subject text-uppercase">OR</label>
+              </span>
+            </div>
+            
+            <div class="col-md-1">
+            <div class="checkbox vzbs-checkbox margin-zero" >
+               <input type="checkbox" role="checkbox" ng-model="item.name"/>
+               <label></label>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <span class="caption caption-red text-uppercase" style="padding-top:10px;">
+                <label class="caption-subject text-uppercase">Select All Url's</label>
+              </span>
+            </div>
+          </div>
+          
+      </div>
+      
+      <br>
+
+   <div class="row">
+        <div class="col-md-12">  
+            <div ng-repeat="item in rule.reportObject">
+
+              <div class="row">
+                <div class="col-md-12">
+                  <!-- BEGIN Portlet PORTLET-->
+                  <div class="portlet portlet-bordered">
+                    <div class="portlet-title">
+                      <div class="caption caption-red">
+
+
+
+                       <div ng-form editable-form name="ruleForm">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                      <span class="caption-subject text-uppercase" editable-text="item.ruleName"  ng-init="item.ruleName = item.ruleName || 'Rule'"  ng-click="ruleForm.$show()">{{item.ruleName || 'Rule'}}
+                      </span>
+                       
+                      <span ng-show="ruleForm.$visible" style="margin-left: -39px;">
+                      <a href="javascript:void(0)" type="button" class="fa fa-check-circle fa-2x" ng-disabled="ruleForm.$waiting" ng-click="ruleForm.$submit()" style="text-decoration: none;">
+                      </a>
+
+                      <a href="javascript:void(0)" type="button" class="fa fa-times-circle-o fa-2x text-danger" ng-disabled="ruleForm.$waiting" ng-click="ruleForm.$cancel()" style="text-decoration: none;"></a>
+                    </span>
+                   </div>
+                 </div>
+
+                  <span class="pull-right">
+                    
+                    <a href="javascript:void(0)" ng-click="remove($index)">
+                      <i class="glyphicon glyphicon-trash text-danger" title="Delete Rule"></i>
+                    </a>
+                  </span>
+              </div>
+
+
+                     
+                    <div class="portlet-body">
+                      <div class="row">
+                        <div class="col-md-12"  style="background: #f2dede;height: 98px;">
+                          <div class="col-md-2">
+                          </div>
+                          <div class="col-md-2" style="margin: 0px 22px;">
+                            <div class="form-group" style="background: #f2dede; padding: 17px; margin-bottom: 30px;">
+                              <label>Export</label>
+                              <select class="form-control" ng-model="item.fieldName">
+                                  <option value="">Select Property</option>
+                                  <option value="Latency">Latency</option>
+                                  <option value="Status">Status</option>
+                                  <option value="Visits">Visits</option>
+                                  <option value="Backlink">Backlink</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="col-md-2">
+                           <div class="form-group" style="background: #f2dede; padding: 17px; margin-bottom: 30px;">
+                            <label>Operator</label>
+                              <select class="form-control" ng-model="item.operator">
+                                  <option value="">Select Operator</option>
+                                  <option value=">">></option>
+                                  <option value="<"><</option> 
+                                  <option value=">=">>=</option>
+                                  <option value="<="><=</option>                                              
+                              </select>
+                          </div>
+                        </div>
+
+                        <div class="col-md-2" style="margin: 0px 22px;">
+                         <div class="form-group" style="background: #f2dede; padding: 17px; margin-bottom: 30px;">
+                            <label>Enter Name</label>
+                            <input type="text" class="form-control" name="value" placeholder="Fill the Name " ng-model="item.value">
+                            </div>
+                        </div>
+
+                    </div>
+                  </div>
+                       
+                      
+                   
+                    </div>
+                  </div>
+                  <!-- END Portlet PORTLET-->
+                </div>
+              
+              </div>
+            </div>     
+
+            <!-- Add Button -->
+              <span class="pull-right plus-al" ng-hide="rule.reportObject == 0" >
+                <!-- <i class="fa fa-plus-circle fa-3x text-info"  aria-hidden="true"></i> -->
+                <a href="javascript:void(0)" class="fa fa-plus-circle fa-2x text-info" ng-click="addNew()" style="text-decoration: none;">
+                </a>
+             </span>
+
+              <span ng-show="rule.reportObject == 0" class="pull-right" style="padding-bottom: 10px;">
+                 <a href="javascript:void(0)" class="fa fa-plus-circle fa-2x text-info"
+                   ng-click="addNew()" style="text-decoration: none;">
+                  </a>
+              </span>
+
+              <div ng-hide="personalDetails == 0">
+                <div class="col-md-12 text-right sav">
+                    <a class="btn btn-default btn-sm" ui-sref="/" >Cancel</a>
+                    <!-- <button class="btn btn-primary btn-sm" ng-if="$ctrl.submitted && $ctrl.showLoading" disabled><i class="glyphicon glyphicon-refresh fa-spin"></i> Saving...</button> -->
+                    <!--  ui-sref="view" -->
+                    <button class="btn btn-primary btn-sm"  type="submit">Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           
+             
+                
+                 <!-- <div ng-form editable-form name="ruleForm">
+                  <span editable-text="item.ruleName" ng-click="ruleForm.$show()"
+                   style="padding-left: 80px;"><label>{{item.ruleName||'Rule'}}</label>
+                 </span>
+                  <span ng-show="ruleForm.$visible" style="margin-left: -39px;">
+                    <a href="javascript:void(0)" type="button" class="fa fa-check-circle fa-3x" ng-disabled="ruleForm.$waiting" ng-click="ruleForm.$submit()">
+                   
+                    </a>
+                   
+                    <a href="javascript:void(0)" type="button" class="fa fa-times-circle-o fa-3x text-danger" ng-disabled="ruleForm.$waiting" ng-click="ruleForm.$cancel()"></a>
+                  </span>
+                </div> -->
+               
+
+                <!-- <a href="" editable-text="item.ruleName">{{ item.ruleName || 'Rule'}}
+                  <span ng-show="rule.ruleName==Rule">#:{{$index + 1}} </span>
+                </a> -->
+
+                    <!-- <i class="glyphicon glyphicon-pencil text-info"></i>
+                     <a href="" ng-click="remove($index)"><i class="glyphicon glyphicon-trash text-danger">
+                     </i></a> -->
+               
+                
+
+                
+
+
+
+                <!-- <div class="row">
+                   <div class="col-md-2">
+                     
+
+                   </div>
+                    <div class="col-md-3">
+                     <div class="form-group" style="background: #f2dede; padding: 20px; margin-bottom: 30px;">
+                        <label>Export</label>
+                        <select class="form-control" ng-model="item.fieldName">
+                            <option value="">Select Url Property</option>
+                            <option value="Latency">Latency</option>
+                            <option value="Status">Status</option>
+                            <option value="Visits">Visits</option>
+                            <option value="Backlink">Backlink</option>
+                        </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                     <div class="form-group" style="background: #f2dede; padding: 20px; margin-bottom: 30px;">
+                        <label>Operator</label>
+                        <select class="form-control" ng-model="item.operator">
+                            <option value="">select Operator</option>
+                            <option value=">">></option>
+                            <option value="<"><</option> 
+                            <option value=">=">>=</option>
+                            <option value="<="><=</option>                                              
+                        </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                     <div class="form-group" style="background: #f2dede; padding: 20px; margin-bottom: 30px;">
+                        <label>Enter Name</label>
+                        <input type="text" class="form-control" name="value" placeholder="Fill the Name " ng-model="item.value">
+                        </div>
+                    </div>
+                    
+                   
+                       <a href="javascript:void(0)" ng-click="remove($index)">
+                        <i class="glyphicon glyphicon-trash text-danger" >
+                       </i></a>
+                     
+                   
+                    </div>
+                  -->
+                 
+                         
+
+                    <!-- <div class="col-md-1">
+                        <span class="pull-right" ng-hide="personalDetails == 0">
+                        <a href="javascript:void(0)" name="fname" class="btn btn-xs btncs btncol" ng-click="addNew()" >Add
+                        </a>
+                    </span>
+
+                    <span ng-show="personalDetails == 0">
+                        <a href="javascript:void(0)" name="fname" class="btn btn-xs btncol" ng-click="addNew()">Add
+                        </a>
+                    </span>
+
+                    </div>  -->
+                    
+              
+           
+            
+           
+              <!-- <div  ng-hide="personalDetails == 0">
+                <div class="col-md-12 text-right sav">
+                    <a class="btn btn-default btn-sm" ui-sref="/" >Cancel</a>
+                    <button class="btn btn-primary btn-sm" ng-if="$ctrl.submitted && $ctrl.showLoading" disabled><i class="glyphicon glyphicon-refresh fa-spin"></i> Saving...</button>
+                  
+                    <button class="btn btn-primary btn-sm"  type="submit"  ui-sref="view">Save</button>
+                </div>
+              </div> -->
+           
+     
+
+
+
+
+    
+          <!--   <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default" style="padding: 10px; background-color: #dff0d8; ">
+                        
+                        <h4><strong>Recommendations</strong></h4>
+                        <ul>
+                        <li><a href="http://www.verizonwireless.com" target="_blank" style="color: red;">Backlinks from bad websites</a></li>
+                        <li><a href="http://www.verizonwireless.com" target="_blank" style="color: #8a6d3b;">Duplicate Content</a></li>
+                        <li><a href="http://www.verizonwireless.com" target="_blank" style="color: #31708f;">Latency Issues</a></li>
+                        <li><a href="http://www.verizonwireless.com" target="_blank" style="color: #3c763d;">Images Issues</a></li>
+                        <li><a href="http://www.verizonwireless.com" target="_blank">Rewrite Content</a>    </li>                        
+                        </ul>    
+                        <ul class="indicators">
+                        <li><i class="fa fa-circle text-success">Normal</i></li>
+                        <li><i class="fa fa-circle text-info">Major</i></li>
+                        <li><i class="fa fa-circle text-danger">Critical</i></li>
+                        <li><i class="fa fa-circle text-warning">Minor</i></li>
+                        </ul>                    
+                    </div>                                        
+                </div>                                        
+            </div> -->

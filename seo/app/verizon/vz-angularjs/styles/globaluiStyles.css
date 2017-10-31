@@ -1,0 +1,2265 @@
+/* Neue Haas Grotesk Font for Verizon */
+/* Neue Haas Grotesk Display Bold 75 */
+@font-face {
+    font-family: 'nhg-display-bold';
+    src: url(fonts/Neue-haas/display-bold-75.eot?#iefix);
+    src: url(fonts/Neue-haas/display-bold-75.eot?#iefix) format("eot"),url(fonts/Neue-haas/display-bold-75.woff2) format("woff2"),url(fonts/Neue-haas/display-bold-75.woff) format("woff"),url(fonts/Neue-haas/display-bold-75.ttf) format("truetype"),url(fonts/Neue-haas/display-bold-75.svg) format("svg#display-bold-75");
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.025em;
+}
+
+/* Neue Haas Grotesk Text Bold 75 */
+@font-face {
+    font-family: 'nhg-text-bold';
+    src: url(fonts/Neue-haas/text-bold-75.eot?#iefix);
+    src: url(fonts/Neue-haas/text-bold-75.eot?#iefix) format("eot"),url(fonts/Neue-haas/text-bold-75.woff2) format("woff2"),url(fonts/Neue-haas/text-bold-75.woff) format("woff"),url(fonts/Neue-haas/text-bold-75.ttf) format("truetype"),url(fonts/Neue-haas/text-bold-75.svg) format("svg#text-bold-75");
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.025em;
+}
+
+/* Neue Haas Grotesk Text Roman 55 */
+@font-face {
+    font-family: 'nhg-text-roman';
+    src: url(fonts/Neue-haas/roman-text-55.eot?#iefix);
+    src: url(fonts/Neue-haas/roman-text-55.eot?#iefix) format("eot"),url(fonts/Neue-haas/roman-text-55.woff2) format("woff2"),url(fonts/Neue-haas/roman-text-55.woff) format("woff"),url(fonts/Neue-haas/roman-text-55.ttf) format("truetype"),url(fonts/Neue-haas/roman-text-55.svg) format("svg#roman-text-55");
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.025em;
+}
+
+/* Neue Haas Grotesk Text Italic 56 */
+@font-face {
+    font-family: 'nhg-text-italic';
+    src: url(fonts/Neue-haas/text-italic-56.eot?#iefix);
+    src: url(fonts/Neue-haas/text-italic-56.eot?#iefix) format("eot"),url(fonts/Neue-haas/text-italic-56.woff2) format("woff2"),url(fonts/Neue-haas/text-italic-56.woff) format("woff"),url(fonts/Neue-haas/text-italic-56.ttf) format("truetype"),url(fonts/Neue-haas/text-italic-56.svg) format("svg#text-italic-56");
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.025em;
+}
+
+/* Reset styles */
+header.vz-gui-global-header * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    letter-spacing: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+header.vz-gui-global-header,
+header.vz-gui-global-header menu,
+header.vz-gui-global-header nav,
+header.vz-gui-global-header main,
+header.vz-gui-global-header section {
+    display: block;
+}
+
+header.vz-gui-global-header {
+    background: #ffffff none repeat scroll 0 0;
+    position: relative;
+    z-index: 1000;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border-bottom: none;
+}
+
+header.vz-gui-global-header nav.vz-gui-navbar{
+    border-bottom: 1px solid #cccccc;
+    box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.1);
+    max-width: none;
+    position: relative;
+    width: 100%;
+    z-index: 1005;
+    background: #ffffff none repeat scroll 0 0;
+}
+
+header.vz-gui-global-header a {
+    text-decoration: none;
+    color: #06c;
+    outline: none;
+}
+
+header.vz-gui-global-header a:hover {
+    text-decoration: underline;
+}
+
+header.vz-gui-global-header button,header.vz-gui-global-header select {
+    text-transform: none;
+}
+
+header.vz-gui-global-header button {
+    overflow: visible;
+}
+header.vz-gui-global-header input[type="text"]{
+    border: 1px solid #CCC;
+    color: #555;
+    margin-bottom: 3px;
+    padding: 3px;
+    font-size: 14px;
+}
+header.vz-gui-global-header img {
+    vertical-align: middle;
+    border: 0 none;
+}
+input[type="text"]::-ms-reveal, input[type="text"]::-ms-clear {
+    display: none !important;
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+header.vz-gui-global-header .vz-gui-clearfix {
+    clear: both;
+    display: block;
+}
+header.vz-gui-global-header .vz-gui-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header.vz-gui-global-header .vz-gui-container::after {
+    clear: both;
+}
+
+header.vz-gui-global-header .vz-gui-container::after,.vz-gui-container::before {
+    content: " ";
+    display: table;
+}
+
+header.vz-gui-global-header .vz-gui-visible-xs {
+    display: block;
+}
+
+header.vz-gui-global-header .vz-gui-pull-right {
+    float: right;
+}
+
+header.vz-gui-global-header .vz-gui-pull-left {
+    float: left;
+}
+
+/* header wrapper */
+
+header.vz-gui-global-header .vz-gui-navbar.vz-gui-navbar-default {
+    background-color: #fff;
+}
+
+header.vz-gui-global-header .vz-gui-navbar {
+    min-height: 64px;
+}
+
+header.vz-gui-global-header .vz-gui-navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 0;
+    position: relative;
+}
+
+header.vz-gui-global-header .vz-gui-navbar.vz-gui-navbar-default .vz-gui-container {
+    padding: 0;
+}
+
+header.vz-gui-global-header .vz-gui-navbar .vz-gui-navbar-header {
+    margin: 0;
+    min-height: 65px;
+}
+
+header.vz-gui-global-header .vz-gui-navbar-header .vz-gui-navbar-brand {
+    background-repeat: no-repeat;
+    height: 64px;
+    margin: 0 0 0 50px;
+    padding: 0;
+    color: #777;
+    float: left;
+    font-size: 18px;
+    line-height: 20px;
+    position: relative;
+    z-index: 5;
+}
+
+header.vz-gui-global-header .vz-gui-navbar-header .vz-gui-navbar-brand:hover{
+    text-decoration: none;
+}
+.vz-gui-navbar-header .vz-gui-navbar-brand > span {
+    color: #333;
+    font-family: "nhg-display-bold",arial;
+    letter-spacing: 0.025em;
+    line-height: 65px;
+    font-size: 18px;
+}
+
+/* Global menu */
+header.vz-gui-global-header .vz-gui-navbar-collapse {
+    clear: left;
+    float: left;
+    display: none;
+    width: 100%;
+}
+
+header.vz-gui-global-header .vz-gui-nav.vz-gui-navbar-nav li{
+    border-top: 1px solid #ccc;
+}
+header.vz-gui-global-header .vz-gui-nav.vz-gui-navbar-nav > li.vz-gui-dropdown > a{
+    background-color: #F6F6F6;
+}
+
+header.vz-gui-global-header .vz-gui-navbar-collapse ul.vz-gui-navbar-nav > li > a {
+    color: #000;
+    font-family: "nhg-display-bold",arial;
+    letter-spacing: 0.025em;
+    font-size: 18px;
+    padding: 15px;
+}
+
+header.vz-gui-global-header .vz-gui-navbar-collapse ul.vz-gui-navbar-nav > li > a:hover {
+    color: #cd040b;
+}
+
+header.vz-gui-global-header .vz-gui-navbar-collapse ul.vz-gui-navbar-nav > li.vz-gui-active > a {
+    color: #cd040b;
+    box-sizing: border-box;
+}
+
+header.vz-gui-global-header .vz-gui-navbar-collapse ul.vz-gui-navbar-nav > li > a,
+header.vz-gui-global-header .vz-gui-navbar-collapse ul.vz-gui-navbar-nav > li > a::after, 
+header.vz-gui-global-header .vz-gui-navbar-collapse ul.vz-gui-navbar-nav > li > a::before {
+    box-sizing: border-box;
+}
+
+header.vz-gui-global-header .vz-gui-navbar-collapse li a {
+    color: #333;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    vertical-align: top;
+    width: 100%;
+}
+
+header.vz-gui-global-header .vz-gui-navbar-collapse li a:hover {
+    text-decoration: none;
+}
+
+header.vz-gui-global-header ul.vz-gui-sub-dropdown > li {
+    padding: 15px 5px 15px 30px;
+}
+
+header.vz-gui-global-header ul.vz-gui-sub-dropdown > li a {
+    font-family: 'nhg-text-bold', arial;
+    font-size: 14px;
+    letter-spacing: 0.025em;
+}
+
+header.vz-gui-global-header .vz-gui-navbar-collapse ul.vz-gui-dropdown {
+    position: relative;
+}
+
+header.vz-gui-global-header ul.vz-gui-sub-dropdown li.vz-gui-dropdown ul {
+    display: none;
+}
+
+header.vz-gui-global-header .vz-gui-navbar-collapse li.vz-gui-dropdown:hover .vz-gui-dropdown-menu,header.vz-gui-global-header .vz-gui-navbar-collapse li.vz-gui-dropdown li.vz-gui-dropdown:hover .vz-gui-dropdown-menu {
+    width: 100%;
+}
+
+header.vz-gui-global-header .vz-gui-dropdown-content {
+    background: #fff none repeat scroll 0 0;
+    margin-left: -20px;
+}
+
+header.vz-gui-global-header .vz-gui-navbar-collapse li.vz-gui-dropdown li.vz-gui-dropdown ul.vz-gui-dropdown-menu li {
+    display: block;
+}
+
+header.vz-gui-global-header .vz-gui-navbar-toggle {
+    background-image: none;
+}
+header.vz-gui-global-header .vz-gui-navbar-collapse > ul > li > ul {
+    padding: 0;
+}
+header.vz-gui-global-header .vz-gui-navbar ul {
+    list-style: outside none none;
+    text-align: left;
+}
+
+header.vz-gui-global-header .vz-gui-navbar .vz-gui-navbar-toggle {
+    cursor: pointer;
+}
+
+header.vz-gui-global-header .vz-gui-navbar-toggle {
+    float: left;
+    height: 64px;
+}
+
+header.vz-gui-global-header .vz-gui-navbar-header .vz-gui-navbar-toggle {
+    border: medium none;
+    border-radius: 0;
+    left: 0;
+    margin: 0;
+    padding: 21px 10px;
+    position: absolute;
+    z-index: 100;
+}
+
+header.vz-gui-global-header .vz-gui-navbar-toggle,header.vz-gui-global-header .vz-gui-navbar-toggle:focus {
+    background-color: #fff;
+}
+
+header.vz-gui-global-header .vz-gui-navbar-toggle .vz-gui-icon-bar {
+    background-color: #333;
+    border-radius: 0;
+    height: 5px;
+    width: 23px;
+}
+
+header.vz-gui-global-header .vz-gui-navbar-toggle .vz-gui-icon-bar + .vz-gui-icon-bar {
+    margin-top: 4px;
+}
+
+header.vz-gui-global-header .vz-gui-navbar-toggle .vz-gui-icon-bar {
+    border: medium none;
+}
+
+header.vz-gui-global-header .vz-gui-navbar-toggle .vz-gui-icon-bar {
+    display: block;
+}
+
+/** Custom Menu **/
+header.vz-gui-global-header.vz-gui-global-header-custom-menu .vz-gui-navbar-header .vz-gui-navbar-toggle{
+    left: 40px;
+}
+header.vz-gui-global-header.vz-gui-global-header-custom-menu .vz-gui-navbar-header .vz-gui-home-toggle {
+    height: 65px;
+    left: 0;
+    padding: 0 22px;
+    position: absolute;
+}
+header.vz-gui-global-header .vz-gui-app-name {
+    float: left;
+    font-family: "nhg-display-bold",arial;
+    font-size: 18px;
+    letter-spacing: 0.025em;
+    padding: 19px 0;
+}
+
+header.vz-gui-global-header .vz-gui-navbar-collapse ul.vz-gui-navbar-nav.vz-gui-custom-nav .vz-gui-dropdown-content .vz-gui-icon{
+    display: none;
+}
+header.vz-gui-global-header .vz-gui-navbar-collapse ul.vz-gui-navbar-nav.vz-gui-custom-nav li.vz-gui-dropdown li.vz-gui-dropdown ul.vz-gui-dropdown-menu li.vz-gui-dropdown-content ul li{
+    width: 100%;
+    padding: 7px 0;
+}
+
+header.vz-gui-global-header .vz-gui-navbar-collapse ul.vz-gui-navbar-nav.vz-gui-custom-nav > li > a{
+    font-size: 18px;
+}
+header.vz-gui-global-header .vz-gui-navbar-collapse .vz-gui-navbar-nav .vz-gui-home-dropdown{
+    position: relative;
+    padding-right: 5px;
+}
+
+header.vz-gui-global-header .vz-gui-navbar-collapse .vz-gui-navbar-nav .vz-gui-home-dropdown:hover ul.vz-gui-home-dropdown-menu{
+    display: block;
+    left: -10px;
+    top: 40px;
+    width: auto;
+}
+header.vz-gui-global-header li.vz-gui-home-dropdown:hover span.vz-gui-arrow-down{
+    color: #333;
+}
+
+header.vz-gui-global-header .vz-gui-navbar-collapse .vz-gui-navbar-nav ul.vz-gui-home-dropdown-list li{
+    display: block;
+    padding: 10px 35px 10px 15px;
+}
+header.vz-gui-global-header .vz-gui-navbar-collapse .vz-gui-navbar-nav ul.vz-gui-home-dropdown-list li a {
+    font-family: 'nhg-display-bold', arial;
+    font-size: 14px;
+    letter-spacing: 0.025em;
+}
+header.vz-gui-global-header .vz-gui-navbar-collapse .vz-gui-navbar-nav ul.vz-gui-home-dropdown-list li:hover a{
+    color: #cd040b;
+}
+header.vz-gui-global-header .vz-gui-hidden-xs{
+    display: none;
+}
+
+/* search toggle */
+header.vz-gui-global-header .vz-gui-search-toggle {
+    background-color: #fff;
+    border: 0 none;
+    color: #cd040b;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-size: 24px;
+    overflow: hidden;
+    padding: 31px 21px;
+    right: 0;
+    z-index: 3000;
+}
+
+header.vz-gui-global-header .vz-gui-search-toggle {
+    position: absolute;
+    top: 0;
+}
+
+/* profile toggle */
+header.vz-gui-global-header .vz-gui-profile-toggle {
+    position: absolute;
+    right: 50px;
+    top: 0;
+    cursor: pointer;
+}
+
+header.vz-gui-global-header .vz-gui-profile-toggle {
+    background-color: #fff;
+    border: medium none;
+    padding: 16px 5px;
+}
+
+header.vz-gui-global-header .vz-gui-profile-toggle img {
+    height: 30px;
+    width: 30px;
+}
+
+header.vz-gui-global-header #vz-gui-profile-menu {
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    position: relative;
+    width: 100%;
+    z-index: 1002;
+}
+
+header.vz-gui-global-header .vz-gui-dropdown-toggle {
+    display: none;
+}
+
+header.vz-gui-global-header .vz-gui-dropdown-toggle:hover {
+  text-decoration: none;
+}
+
+header.vz-gui-global-header #vz-gui-profile-menu a {
+    color: #333;
+}
+
+header.vz-gui-global-header #vz-gui-profile-menu a .vz-gui-name {
+    color: #4b4b4b;
+    font-family: 'nhg-text-roman', arial;
+    letter-spacing: 0.025em;
+    font-size: 14px;
+    max-width: 105px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+header.vz-gui-global-header .vz-gui-todo-count.vz-gui-my-todo-count {
+    font-size: 14px;
+    padding: 2px 8px;
+    right: 15px;
+    top: 8px;
+}
+header.vz-gui-global-header .vz-gui-todo-count {
+    background-color: #cd040b;
+    border-radius: 50%;
+    color: #ffffff;
+    float: right;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 1px 6px;
+    position: absolute;
+    right: -9px;
+    text-align: center;
+    top: -9px;
+}
+
+header.vz-gui-global-header .vz-gui-profile-toggle .vz-gui-todo-count {
+    padding: 1px 6px;
+    right: 2px;
+    top: 10px;
+}
+header.vz-gui-global-header .vz-gui-my-todos h4 {
+    background-color: #f5f5f5;
+    font-family: 'nhg-display-bold',arial;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    padding: 10px 15px;
+}
+header.vz-gui-global-header .vz-gui-my-todos {
+    background-color: #ffffff;
+}
+header.vz-gui-global-header .vz-gui-my-todos > ul {
+    padding: 0 15px;
+}
+header.vz-gui-global-header .vz-gui-my-todos > ul > li {
+    border-bottom: 1px dashed #cccccc;
+    padding: 15px 0;
+}
+header.vz-gui-global-header #vz-gui-profile-menu ul#vz-gui-my-todo-items li a{
+    color: #0066CC;
+}
+header.vz-gui-global-header .vz-gui-my-todos > ul.vz-gui-todo-showall > li {
+    border-bottom: none;
+    width: 50%;
+}
+header.vz-gui-global-header .vz-gui-my-todos ul.vz-gui-todo-showall li.vz-gui-pull-right{
+    text-align: right;
+}
+header.vz-gui-global-header .vz-gui-my-todos ul.vz-gui-todo-showall li a{
+    font-family: 'nhg-display-bold',arial;
+    font-size: 15px;
+    letter-spacing: 0.025em;
+}
+header.vz-gui-global-header .vz-gui-my-todos ul.vz-gui-todo-showall li a:hover{
+    text-decoration: none;
+}
+header.vz-gui-global-header .vz-gui-glyphicon.vz-gui-glyphicon-chevron-down {
+    display: inline-block;
+    height: 18px;
+    width: 25px;
+}
+
+header.vz-gui-global-header #vz-gui-profile-menu a.vz-gui-dropdown-toggle span.vz-gui-glyphicon-menu-down {
+    color: #cd040b;
+    font-size: 11px;
+    margin: 0 5px;
+}
+
+header.vz-gui-global-header #vz-gui-profile-menu a.vz-gui-dropdown-toggle img {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAWlBMVEXHyMrJyszMzc/P0NLLzM6wsrSsrrC2uLqfoaOjpaebnaC6vL6ztbemqKrR0tSWmJqpq63W19jT1NXOz9GHiYzU1deQkpWMjpGYmpyTlZjZ2tuDhYepq67Cw8WqqozrAAABu0lEQVRIx8WUSYKDIBBFFYOgDEYckNjc/5otELvCkGnVb5XFf/4qNFT/Qf3Ih/FL4APFhy01+77PPUdBehOv6H6iGUKglOPI6v0BjEAp5RGq9RxBpkMpGv7xaOrnGH2ZplBSzrM5pWsaMLJ8I3TKisCIBJ9HOofIYIAA+YatOVdZMO55iQsCVeo0ogKXl8IUWJTvgAoosEMJskBFXKBWUxJmqxRUQIGUTA9bAS3cUKECjsgVYL31BTRd/FDnQcFE3PQlTDeGLUDwEynFhp4WGMQhKD/TXbgEYam3orCR0c0ES5wrLGNHuxxK5RhmyoXqEHLI7akwViKHjC+EG7umtLfbK6H5SbGZAKfkDNwmqCMPpxS/BydUSZ7dC4IQv2kvjDimcUL2ps8lfEWUDwXRtwRLuIrD4I/4Dcbka4WZvCE4+aNfQv5xIqgIQ8l1ICdCM5dP/3FQ4Qy+rhtnHnH8DHkoSCsUGowxg8CMt5s5IEceCkA4jYkOMX2l5IubrO62lN5CPr1ba077Argu38YWd/QJLcvyjPx0rxCYVYDlV/EecNj1U3h4fvs5voPgL/AC/wLrhG9wAvsGW/0CxKlP74i8jegAAAAASUVORK5CYII=');
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    color: #666;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 400;
+    height: 30px;
+    line-height: 15px;
+    text-align: center;
+    text-indent: -9999px;
+    text-shadow: 0 1px #fff;
+    width: 30px;
+}
+
+header.vz-gui-global-header .vz-gui-profile-dropdown {
+    background-color: #fff;
+    border: medium none;
+    border-radius: 0;
+    box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+
+    color: #333;
+    margin: 0;
+    min-width: 310px;
+    min-height: 125px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    padding: 0;
+}
+
+header.vz-gui-global-header .vz-gui-profile-dropdown .vz-gui-ui-tooltip-tip {
+    color: #f6f6f6;
+    font-size: 24px;
+    height: 10px;
+    display: none;
+    position: absolute;
+    right: 21px;
+    top: -20px;
+    width: 15px;
+}
+
+header.vz-gui-global-header .vz-gui-profile-dropdown .vz-gui-user-avatar {
+    float: left;
+    width: 120px;
+}
+
+header.vz-gui-global-header .vz-gui-profile-dropdown .vz-gui-user-avatar img {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAAAV1BMVEXHyMrJyszLzM7NztDR0tPT1NWxs7Wtr7HP0NLV1tiqrK+oqqy0triVl5q3ubuho6aZm526vL6Rk5aeoKPY2ducnqCNj5Klp6mkpqiJi46GiIuChIfAwsSDNt0cAAAD1ElEQVRo3uXZ21arMBCAYcIhnAmEc837P+cetO20TAgDFm/2j1dd2M8ZcKno/b+J7+Oq4L3f+rglsKsksdMnBV/4rwn/UwwKG/2eIUIVj0uV+RizEkw2fGF1TJ2TBhJN/bXqlntr5neE135hyGRBQJizRmCGL3u1F4BzUnkjAglf9MahRbBiThFg3ByBQpiDRgA1DgKVgChMI1gS882dSgJkUOEbUD3vVSUJUQ4ZSQXvcnMe8+AnwBCFbyR63i9OuAoiL0RSMAwYJUTmrrANqJ4HxiFDqrCN0AysyhBiKGhADyPMBl7ei+K7FWKEJRORoUVxDoKGGAbNOlS0VgTEMKBGc4sYCiJoQDEbMUQhCB0kXIoUG6miu+IehS4rirQumUcRQXRhm4OgEZXspvRFoaPQQZ6GB5+teR8qRYWMYh8EDW46BwSio7gHCeb5gHKbdkdBBJfVz0PNb56bd4UiAloNImZAypr5AUiNiP17xXJF5DAcmQTO9lPbVXFuqx0GfQwxaerYF9lWBClAen6ASEAgsq/NQQDRuuQbtda6SOmldyPpdAZJXQjdVjrCzd+y6+FsQMi+bEiCSHYIqeFs7xVJ1oiA1ttKK7hlDkwCZycp3ZeAcBCCeAuiuAGiOoJAW0j0jaRt3x9A+l4+kOgAItuWj8C54gySgDExAyTuOEiACBhQoQDhKsoHZIncwy4EytU08ppU051Cui7IRy5SdUvHEVDSJufl3Y0TCBSzDNMxEHp3PRDeKCEi/FsYET9jJLvfIJBkIOY4grfXwhgGEr4joR2BbMhSFO9W3AkbIqDNnyeoVLuIsG0LEfqTkSL+niFXg9A72HFRHkoB7+M6PByEbGsHwVGEdNeRbW0idF94VVwEGYT+3sXaV+Iyqo6xLYrQUYwDCWyDEITsi16VqNjM0FuLbst56Z/KpiEjMgjZFkXsiho3kNLYjS2EXhVUhjmubPVzjob7b0b3KKCYYdA2JYfXn4Z7EDrKWhkHeDdpMaCGGHQQOgpVAv1d3LzX6iWVUgORvWcrqIz6p6lqsKLWPxk0yLIE5ylRtORpqIRDl9mDqNTzxT78JhhPiRAhStKXL6k8k/n49pK0GIjwlLzcq2EaeO3XSlzv51FjQbhPU8Fg1BtqQMznwkHe82q4z4WpYtqeWy6owVFM1h5IVT7TAOShNEhwGekd+t+GV0zqTHkj0HAqXhOr003S7BsgTL8sL4wTkNn4meINyBT5R8sqasgcupYxcXZFxcUGVWR8Vc3LINf1RAp5Xc9R5IVVz++QK7sjTXFl5o5UV/anyKX9GfIPonZJmgkP8L4AAAAASUVORK5CYII=');
+    background-repeat: no-repeat;
+    margin-top: 6px;
+    max-width: 100px;
+    width: 100px;
+    height: 100px;
+}
+header.vz-gui-global-header .vz-gui-profile-dropdown .vz-gui-user-links{
+    float: none;
+    width: auto;
+}
+
+header.vz-gui-global-header .vz-gui-profile-dropdown .vz-gui-user-links ul li{
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #cccccc;
+}
+
+header.vz-gui-global-header .vz-gui-profile-dropdown .vz-gui-user-links ul li:last-child{
+    border-bottom: none;
+    border-top: none;
+    margin-top: 0;
+    padding-top: 10px;
+}
+
+header.vz-gui-global-header .vz-gui-profile-dropdown .vz-gui-user-links h4 span{
+    font-family: 'nhg-display-bold',arial,sans-serif;
+    letter-spacing: 0.025em;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+header.vz-gui-global-header .vz-gui-profile-dropdown .vz-gui-user-links ul {
+    margin: 0;
+    padding: 0;
+}
+
+header.vz-gui-global-header .vz-gui-profile-dropdown .vz-gui-user-links ul li a {
+    color: #333;
+    display: block;
+    font-family: 'nhg-text-bold',arial,sans-serif;
+    font-size: 15px;
+    letter-spacing: .025em;
+    line-height: 25px;
+    text-transform: capitalize;
+}
+header.vz-gui-global-header .vz-gui-profile-dropdown .vz-gui-user-links ul li a:hover{
+    text-decoration: none;
+}
+
+/* Search box */
+header.vz-gui-global-header .vz-gui-search-inner {
+    background: #fff none repeat scroll 0 0;
+    display: none;
+    float: right;
+    height: 65px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 3000;
+}
+
+header.vz-gui-global-header .vz-gui-search-options {
+    border-bottom: 1px solid #ccc;
+    float: left;
+    left: 35px;
+    right: 0;
+    position: relative;
+    top: 18px;
+    width: 88%;
+}
+header.vz-gui-global-header .vz-gui-search-options:hover{
+    border-bottom-color: #333 !important;
+}
+
+header.vz-gui-global-header .vz-gui-search-mobile-close {
+    color: #999;
+    cursor: pointer;
+    font-size: 32px;
+    font-weight: 700;
+    left: 6px;
+    position: absolute;
+    top: 10px;
+}
+
+header.vz-gui-global-header .vz-gui-form-item .vz-gui-select-dropdown-inner {
+    border: medium none;
+    filter: none;
+    padding-bottom: 0;
+    padding-right: 0;
+    width: 87%;
+    position: relative;
+}
+
+header.vz-gui-global-header .vz-gui-form-item .vz-gui-form-text {
+    background: transparent none repeat scroll 0 0 !important;
+    color: #58585b;
+    cursor: text;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    height: 30px;
+}
+
+header.vz-gui-global-header #vz-gui-search-form .vz-gui-form-item label {
+    color: #999;
+    float: left;
+    font-size: .917em;
+    font-weight: 400;
+    line-height: 26px;
+    padding: 2px 7px 0 0;
+    text-transform: capitalize;
+}
+
+header.vz-gui-global-header .vz-gui-sr-only {
+    border: 0 none;
+    clip: rect(0px,0px,0px,0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+}
+
+header.vz-gui-global-header #vz-gui-search-form .vz-gui-form-item .vz-gui-form-input {
+    background: rgba(0,0,0,0) none repeat scroll 0 0;
+    border: medium none;
+    color: #4b4b4b;
+    font-family: "nhg-text-roman",arial;
+    letter-spacing: 0.025em;
+    font-size: 15px;
+    font-weight: 400;
+    height: 30px;
+    padding: 0;
+    width: 99%;
+    float: left;
+    outline: none;
+}
+header.vz-gui-global-header #vz-gui-search-form .vz-gui-form-item .vz-gui-form-input:focus{
+    color: #000;
+    font-weight: 700 !important;
+}
+
+header.vz-gui-global-header #vz-gui-search-form .vz-gui-form-submit {
+    border: medium none;
+    box-shadow: none;
+    cursor: pointer;
+    float: right;
+    height: 25px;
+    padding: 0;
+    width: 13%;
+}
+
+/* Advanced search toggle */
+header.vz-gui-global-header #vz-gui-adv-search-wrapper.vz-gui-dropdown {
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 12px 18px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0 12px 18px rgba(0, 0, 0, 0.25);
+    float: right;
+    font-weight: bold;
+    right: -10px;
+    list-style: outside none none;
+    padding: 15px;
+    position: absolute;
+    top: 45px;
+    width: 450px;
+    text-align: left;
+}
+header.vz-gui-global-header #vz-gui-adv-search-wrapper.vz-gui-dropdown h2{
+    font-family: 'nhg-display-bold',arial;
+    padding: 5px 0;
+    font-size: 18px;
+    letter-spacing: 0.025em;
+    color: #333 !important;
+}
+header.vz-gui-global-header #vz-gui-adv-search-wrapper.vz-gui-dropdown label{
+    display: block;
+    clear: both;
+    padding: 10px 0;
+    font-family: 'nhg-display-bold',arial;
+    letter-spacing: 0.025em;
+    font-size: 14px;
+}
+
+header.vz-gui-global-header #vz-gui-adv-search-wrapper.vz-gui-dropdown input[type="text"],
+header.vz-gui-global-header #vz-gui-adv-search-wrapper.vz-gui-dropdown select{
+    float: left;
+    width: 48.8% !important;
+    margin-bottom: 12px;
+    padding: 7px 3px 7px 10px;
+    font-weight: normal;
+    color: #989898;
+    box-sizing: border-box;
+    background-image: none;
+    height: 35px;
+    font-size: 14px;
+}
+header.vz-gui-global-header #vz-gui-adv-search-wrapper.vz-gui-dropdown input[type="text"]{
+}
+
+header.vz-gui-global-header #vz-gui-adv-search-wrapper.vz-gui-dropdown input:focus{
+    color: #000;
+    font-weight: 700 !important;
+}
+
+
+header.vz-gui-global-header #vz-gui-adv-search-wrapper.vz-gui-dropdown select{
+    border: 1px solid #CCC;
+    -webkit-appearance: menulist;
+    -moz-appearance: menulist;
+    appearance: menulist;
+}
+header.vz-gui-global-header #vz-gui-adv-search-wrapper.vz-gui-dropdown select option {
+    padding: 0 10px;
+}
+header.vz-gui-global-header #vz-gui-adv-search-wrapper.vz-gui-dropdown a.vz-gui-btn{
+    display: block;
+    clear: both;
+    float: left;
+    margin: 15px 0;
+}
+
+header.vz-gui-global-header #vz-gui-adv-search-wrapper.vz-gui-dropdown .vz-gui-btn-arrow{
+    background-position: -10px -2976px !important;
+    display: inline-block;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+header.vz-gui-global-header #vz-gui-adv-search-wrapper.vz-gui-dropdown a.vz-gui-btn:hover{
+    text-decoration: none;
+}
+header.vz-gui-global-header #vz-gui-adv-search-wrapper .vz-gui-adv-search-form-odd{
+    margin-right: 10px;
+}
+header.vz-gui-global-header #vz-gui-adv-search-wrapper .vz-gui-form-error {
+    color: #5e2435;
+    font-size: 11px;
+    padding: 15px;
+    background-color: #ffced0;
+}
+header.vz-gui-global-header #vz-gui-adv-search-wrapper .vz-gui-form-error-asterisk {
+    background-position: -10px -3091px !important;
+    display: inline-block;
+    padding: 15px;
+    vertical-align: top;
+}
+header.vz-gui-global-header #vz-gui-adv-search-wrapper .vz-gui-form-error-title{
+    color: #5e2435;
+    display: inline;
+    font-family: 'nhg-display-bold',arial;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0.025em;
+    line-height: 22px;
+    padding-left: 5px;
+}
+header.vz-gui-global-header #vz-gui-adv-search-wrapper .vz-gui-form-error-container{
+    display: block;
+    font-family: 'nhg-text-roman',arial;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 22px;
+}
+
+/* Nav icons */
+header.vz-gui-global-header .vz-gui-glyphicon,
+header.vz-gui-global-header .vz-gui-active .vz-gui-icon.vz-gui-icon-home,
+header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-home,
+header.vz-gui-global-header #vz-gui-search-form .vz-gui-form-submit,
+header.vz-gui-global-header .vz-gui-search-mobile-close, 
+header.vz-gui-global-header .vz-gui-search-clear, 
+header.vz-gui-global-header .vz-gui-search-toggle, 
+header.vz-gui-global-header .vz-gui-navbar-header .vz-gui-navbar-toggle,
+header.vz-gui-global-header .vz-gui-navbar-header .vz-gui-home-toggle,
+header.vz-gui-global-header .vz-gui-navbar-header .vz-gui-profile-toggle[toggle="vz-gui-expanded"],
+header.vz-gui-global-header .vz-gui-glyphicon-plus,
+header.vz-gui-global-header .vz-gui-stock-toggle,
+header.vz-gui-global-header .vz-gui-stock-move,
+header.vz-gui-global-header .vz-gui-my-todos span.vz-gui-btn-arrow,
+.vz-gui-modal-close,
+.vz-gui-icon-delete,
+.vz-gui-fav-search-clear,
+.vz-gui-icon-preview,
+header.vz-gui-global-header #vz-gui-adv-search-wrapper.vz-gui-dropdown .vz-gui-btn .vz-gui-btn-arrow,
+header.vz-gui-global-header #vz-gui-adv-search-wrapper .vz-gui-form-error-asterisk,
+header.vz-gui-global-header .vz-gui-icon.vz-gui-arrow-down {
+    background-image: url('data:image/png;base64,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');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-home{
+    background-position: -15px -39px;
+}
+header.vz-gui-global-header .vz-gui-active .vz-gui-icon.vz-gui-icon-home, 
+header.vz-gui-global-header .vz-gui-home-dropdown:hover .vz-gui-icon.vz-gui-icon-home, 
+header.vz-gui-global-header .vz-gui-menu-vzweb:hover .vz-gui-icon.vz-gui-icon-home{
+    background-position: -15px -155px;
+}
+header.vz-gui-global-header .vz-gui-glyphicon.vz-gui-glyphicon-triangle-top{
+    background-position: 0 -1063px;
+    padding: 1px 18px;
+}
+header.vz-gui-global-header .vz-gui-glyphicon.vz-gui-glyphicon-chevron-down{
+    background-position: -12px -619px;
+}
+header.vz-gui-global-header .vz-gui-glyphicon.vz-gui-glyphicon-arrow-up {
+    background-position: -3px -2124px;
+    height: 25px;
+    left: 50%;
+    position: absolute;
+    top: 29px;
+    width: 25px;
+    z-index: 1;
+}
+header.vz-gui-global-header .vz-gui-icon.vz-gui-arrow-down{
+    background-position: -18px -724px;
+    font-family: arial;
+    font-weight: normal;
+    line-height: 21px;
+    padding: 0 0 0 18px;
+}
+header.vz-gui-global-header li.vz-gui-home-dropdown:hover .vz-gui-icon.vz-gui-arrow-down{
+    background-position: -18px -619px;
+}
+header.vz-gui-global-header .vz-gui-navbar-header .vz-gui-navbar-toggle{
+    background-position: 0 -928px;
+    width: 45px;
+}
+header.vz-gui-global-header .vz-gui-navbar-header .vz-gui-home-toggle{
+    background-position: 5px -21px;
+}
+header.vz-gui-global-header .vz-gui-navbar-header .vz-gui-navbar-toggle[toggle="vz-gui-expanded"]{
+    background-position: -1px -814px;
+}
+header.vz-gui-global-header .vz-gui-navbar-header .vz-gui-profile-toggle[toggle="vz-gui-expanded"] {
+    background-position: -1px -814px;
+    height: 65px;
+    width: 45px;
+}
+header.vz-gui-global-header .vz-gui-navbar-header .vz-gui-profile-toggle[toggle="vz-gui-expanded"] img{
+    display: none;
+}
+header.vz-gui-global-header #vz-gui-search-form .vz-gui-form-submit{
+    background-position: -8px -391px;
+}
+header.vz-gui-global-header .vz-gui-search-mobile-close{
+    background-position: -5px -512px;
+    height: 25px;
+    left: 0;
+    top: 25px;
+    width: 30px;
+}
+header.vz-gui-global-header .vz-gui-search-toggle{
+    background-position: 0 -373px;
+}
+header.vz-gui-global-header .vz-gui-search-clear {
+    background-position: -9px -2286px;
+    height: 25px;
+    position: absolute;
+    right: 0;
+    top: 4px;
+    width: 25px;
+    cursor: pointer;
+}
+header.vz-gui-global-header .vz-gui-search-loading{
+    position: absolute;
+    right: 37px;
+    top: 3px;
+}
+header.vz-gui-global-header .vz-gui-stock-toggle {
+    background-position: -12px -1723px;
+    display: inline;
+    padding: 5px 10px;
+}
+header.vz-gui-global-header .vz-gui-quote-expander[toggle="vz-gui-expanded"] .vz-gui-stock-toggle {
+    background-position: -12px -1829px;
+}
+header.vz-gui-global-header .vz-gui-quote-expander[toggle="vz-gui-collapsed"] .vz-gui-stock-toggle {
+    background-position: -12px -1723px;
+}
+header.vz-gui-global-header .vz-gui-stock-move{
+    background-position: -17px -1507px;
+    display: inline-block;
+    padding: 7px;
+    margin-right: 0 !important;
+}
+header.vz-gui-global-header .vz-gui-stock-move.vz-gui-move-positive{
+    background-position: -17px -1616px;
+}
+header.vz-gui-global-header .vz-gui-stock-move.vz-gui-move-negative{
+    background-position: -17px -1507px;
+}
+header.vz-gui-global-header .vz-gui-my-todos span.vz-gui-btn-arrow {
+    background-position: -10px -2055px;
+    padding: 5px 25px 5px 0;
+}
+/* Search Autosuggest */
+header.vz-gui-global-header .vz-gui-search-overlay-top{
+  background-color: #fff;
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  line-height: 24px;
+  min-width: 300px;
+  overflow-y: auto;
+  position: absolute;
+  right: 0;
+  top: 66px;
+  width: 100%;
+  text-align: left;
+}
+header.vz-gui-global-header .vz-gui-search-overlay-top.vz-gui-adv-search-top{
+    padding: 15px 0;
+}
+header.vz-gui-global-header .vz-gui-search-overlay-top.vz-gui-adv-search-top a{
+    padding-left: 15px;
+    font-weight: bold;
+}
+header.vz-gui-global-header .vz-gui-search-results {
+    padding: 15px 0 !important;
+}
+
+header.vz-gui-global-header .vz-gui-search-results span.vz-gui-open {
+    font-weight: 700;
+    color: #333;
+}
+header.vz-gui-global-header .vz-gui-result > div {
+    color: #06c;
+    cursor: pointer;
+    font-family: 'nhg-text-roman', arial;
+    letter-spacing: 0.025em;
+    text-transform: capitalize;
+}
+header.vz-gui-global-header .vz-gui-title, header.vz-gui-global-header .vz-gui-title * {
+    font-size: 12px;
+}
+header.vz-gui-global-header .vz-gui-title.vz-gui-title-name, header.vz-gui-global-header .vz-gui-title.vz-gui-title-name *{
+    font-size: 14px;
+    color: #0066CC;
+}
+header.vz-gui-global-header .vz-gui-result .vz-gui-title-lob, 
+header.vz-gui-global-header .vz-gui-result .vz-gui-title-job,
+header.vz-gui-global-header .vz-gui-result .vz-gui-title-phone a{
+    color: #333;
+    cursor: default;
+    text-decoration: none;
+}
+header.vz-gui-global-header .vz-gui-result .vz-gui-title-lob, 
+header.vz-gui-global-header .vz-gui-result .vz-gui-title-phone,
+header.vz-gui-global-header .vz-gui-result .vz-gui-title-email{
+    padding-left: 1px;
+}
+header.vz-gui-global-header .vz-gui-result .vz-gui-title.vz-gui-title-email, 
+header.vz-gui-global-header .vz-gui-result .vz-gui-title.vz-gui-title-email > a {
+    word-wrap: break-word;
+}
+header.vz-gui-global-header .vz-gui-result .vz-gui-title-job{
+    font-style: italic;
+}
+header.vz-gui-global-header .vz-gui-result .vz-gui-title-phone{
+    font-weight: bold;
+    font-size: 11px;
+    cursor: default;
+}
+
+header.vz-gui-global-header .vz-gui-search-section-heading{
+  font-family: 'nhg-display-bold', arial;
+  font-size: 16px;
+  letter-spacing: 0.025em;
+  display: block;
+  padding: 5px 10px 5px 15px;
+}
+header.vz-gui-global-header .vz-gui-result{
+  padding: 3px 10px 3px 15px;
+}
+header.vz-gui-global-header .vz-gui-result strong{
+  font-weight: bold;
+  color: #0066CC;
+}
+header.vz-gui-global-header .vz-gui-result .vz-gui-avatar {
+    float: left;
+    width: 10%;
+}
+header.vz-gui-global-header .vz-gui-result .vz-gui-people-info {
+    float: left;
+    width: 90%;
+}
+header.vz-gui-global-header .vz-gui-result .vz-gui-avatar img{
+  width: 24px;
+  height: 24px;
+  margin-top: 5px;
+}
+header.vz-gui-global-header .vz-gui-view-all{
+  padding: 10px 15px;
+  clear: both;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+header.vz-gui-global-header .vz-gui-result.vz-gui-active,
+header.vz-gui-global-header .vz-gui-result.vz-gui-active div,  
+header.vz-gui-global-header .vz-gui-result:hover {
+  background-color: #e4e5e3;
+}
+header.vz-gui-global-header .vz-gui-result.vz-gui-active a, 
+header.vz-gui-global-header .vz-gui-result:hover a,
+header.vz-gui-global-header .vz-gui-result:hover div,
+header.vz-gui-global-header .vz-gui-result:hover div h4 {
+  text-decoration: none;
+}
+
+header.vz-gui-global-header .vz-gui-result.vz-gui-result-people{
+    padding-bottom: 15px;
+}
+header.vz-gui-global-header .vz-gui-result.vz-gui-result-people:hover h4:hover,
+header.vz-gui-global-header .vz-gui-result.vz-gui-result-people:hover a:hover{
+  text-decoration: underline;
+}
+
+header.vz-gui-global-header .vz-gui-stocks{
+    display: none;
+}
+
+header.vz-gui-global-header .vz-gui-dummy-div {
+    float:right;
+}
+
+/** A/B Search Autosuggest **/
+header.vz-gui-global-header .vz-gui-navbar{
+    z-index: 1005;
+}
+header.vz-gui-global-header .vz-gui-smartsearch-wrapper-container{
+    margin: 0 auto !important;
+    width: 100%;
+    position: relative;
+    left: 0;
+}
+header.vz-gui-global-header .vz-gui-smartsearch-overlay {
+    background-color: #ededed;
+    height: 100%;
+    left: 0;
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1002;
+}
+header.vz-gui-global-header iframe.vz-gui-smartsearch-iframe {
+    position: absolute;
+    width: 100%;
+    z-index: 1006;
+    margin: 0 auto;
+    box-shadow: 0 3px 20px 5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 8px 20px 5px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 8px 20px 5px rgba(0, 0, 0, 0.1);
+    top: -1px;
+    left: 0;
+    background-color: #fff;
+}
+
+/** A/B Search Autosuggest Mobile**/
+
+@media all and (min-width: 1025px) {
+    header.vz-gui-global-header .vz-gui-smartsearch-wrapper-container,
+    header.vz-gui-global-header iframe.vz-gui-smartsearch-iframe{
+        width: 960px;
+    }
+
+    body.vz-gui-expandedwidth header.vz-gui-global-header .vz-gui-smartsearch-wrapper-container,
+    body.vz-gui-expandedwidth header.vz-gui-global-header iframe.vz-gui-smartsearch-iframe{
+        width: 1170px;
+    }
+
+    body.vz-gui-fullwidth header.vz-gui-global-header .vz-gui-smartsearch-wrapper-container,
+    body.vz-gui-fullwidth header.vz-gui-global-header iframe.vz-gui-smartsearch-iframe{
+        width: 100%;
+    }
+    body.vz-gui-fullwidth header.vz-gui-global-header .vz-gui-smartsearch-wrapper-container .vz-gui-smartsearch-arrow{
+        left: 91%;
+    }
+}
+
+
+
+/** Medium - Large screen breakpoint **/
+@media all and (min-width: 767px) {
+    header.vz-gui-global-header .vz-gui-container {
+        /*width: 100%;*/    /** A/B Search Autosuggest Mobile**/
+    }
+
+    header.vz-gui-global-header .vz-gui-visible-xs {
+        display: none;
+    }
+    header.vz-gui-global-header .vz-gui-hidden-xs{
+        display: block;
+    }
+
+    header.vz-gui-global-header .vz-gui-navbar {
+        min-height: 120px;
+        /*height: 120px; */
+    }
+
+    header.vz-gui-global-header .vz-gui-navbar-header {
+        float: left;
+    }
+    header.vz-gui-global-header .vz-gui-navbar-header button{
+        outline: none;
+    }
+
+    header.vz-gui-global-header .vz-gui-navbar-header .vz-gui-navbar-brand {
+        background-image: url('data:image/png;base64,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');
+        background-position: 10px center;
+        background-size: auto auto;
+        margin-left: 0;
+        min-height: 75px;
+        width: 200px;
+        display: block;
+    }
+    header.vz-gui-global-header .vz-gui-navbar-header .vz-gui-navbar-brand span{
+      display: none;
+    }
+    header.vz-gui-global-header.vz-gui-global-header-custom-menu .vz-gui-app-name {
+        display: inline-block !important;
+        float: none;
+        padding: 0 10px 10px;
+        width: 100%; 
+    }
+
+    /* Stocks */
+    header.vz-gui-global-header .vz-gui-stocks{
+        display: none;
+    }
+    header.vz-gui-global-header .vz-gui-quote-expander {
+        cursor: pointer;
+        display: inline-block;
+        margin-right: 15px;
+        float: right;
+        margin-top: 23px;
+    }
+    header.vz-gui-global-header .vz-gui-stock-quotes{
+        background-color: #ffffff;
+        border-bottom: 1px solid #cccccc;
+        left: auto;
+        margin-left: 10px;
+        opacity: 1;
+        padding: 5px 0;
+        position: absolute;
+        right: auto;
+        text-align: left;
+        top: -30px;
+        width: 940px;
+        z-index: 2;
+        font-size: 14px;
+        /*animation: slideInUp 0.4s both ease-out;*/
+    }
+    header.vz-gui-global-header .vz-gui-stocks span.vz-gui-stock-symbol{
+        font-weight: bold;
+        margin-right: 5px;
+    }
+    header.vz-gui-global-header .vz-gui-stock-quotes > div{
+        border-right: 1px dotted #333333;
+        display: inline;
+        margin-right: 10px;
+        padding-right: 10px;
+    }
+    header.vz-gui-global-header .vz-gui-stocks:hover{
+        background-color: red;
+    }
+
+    header.vz-gui-global-header .vz-gui-stocks > div span {
+        font-size: 12px;
+        margin-right: 2px;
+    }
+    header.vz-gui-global-header .vz-gui-stocks div.vz-gui-stocks-updated{
+        font-size: 12px;
+        border-right: none;
+    }
+    header.vz-gui-global-header .vz-gui-stock-change.vz-gui-change-positive{
+        color: #1e9b00;
+    }
+    header.vz-gui-global-header .vz-gui-stock-change.vz-gui-change-negative{
+        color: #cd040b;
+    }
+
+    header.vz-gui-global-header .vz-gui-navbar-collapse {
+        display: block !important;
+        width: auto;
+        border-top: none;
+    }
+
+    header.vz-gui-global-header .vz-gui-nav.vz-gui-navbar-nav li{
+        border: none;
+    }
+
+    header.vz-gui-global-header .vz-gui-navbar-nav > li {
+        border-top: none;
+        padding: 0;
+    }
+    header.vz-gui-global-header .vz-gui-nav.vz-gui-navbar-nav > li.vz-gui-dropdown > a{
+        background-color: #fff;
+    }
+
+    /*    
+    header.vz-gui-global-header .vz-gui-nav.vz-gui-navbar-nav > li.vz-gui-dropdown > a{
+        background: none;
+    }*/
+
+    header.vz-gui-global-header .vz-gui-dropdown-content {
+        background: none;
+        margin-left: auto;
+    }
+
+    header.vz-gui-global-header .vz-gui-navbar-collapse ul.vz-gui-navbar-nav > li > a {
+        font-size: 21px;
+        padding: 0;
+        font-weight: 400;
+    }
+
+    header.vz-gui-global-header .vz-gui-navbar-collapse li.vz-gui-dropdown li.vz-gui-dropdown ul.vz-gui-dropdown-menu li.vz-gui-dropdown-content ul li {
+        display: inline-block;
+        width: 25%;
+        vertical-align: top;
+        padding: 12px 0;
+    }
+
+    header.vz-gui-global-header .vz-gui-navbar-collapse ul.vz-gui-navbar-nav {
+        margin-left: 10px;
+        max-height: 45px;
+        max-width: 1200px;
+        /*overflow: hidden;*/
+    }
+
+    header.vz-gui-global-header .vz-gui-navbar-collapse ul.vz-gui-navbar-nav > li {
+        padding: 0 18px 15px;
+    }
+    header.vz-gui-global-header .vz-gui-navbar-collapse ul li,header.vz-gui-global-header li.vz-gui-dropdown li.vz-gui-dropdown-content > ul.vz-gui-sub-dropdown {
+        display: inline-block;
+    }
+
+    header.vz-gui-global-header ul.vz-gui-sub-dropdown > li {
+        padding: 15px;
+        line-height: 20px;
+    }
+    header.vz-gui-global-header ul.vz-gui-sub-dropdown > li:hover h3 a{
+      color: #cd040b;
+    }
+    header.vz-gui-global-header ul.vz-gui-sub-dropdown li.vz-gui-dropdown:hover h3 {
+      border-bottom: 2px solid #cd040b;
+      padding-bottom: 13px;
+    }
+
+    header.vz-gui-global-header .vz-gui-nav li.vz-gui-dropdown:hover > a{
+      color: #cd040b;
+    }
+
+    header.vz-gui-global-header .vz-gui-dropdown-menu {
+        float: left;
+        font-size: 14px;
+        list-style: outside none none;
+        position: absolute;
+        text-align: left;
+        top: 100%;
+        z-index: 1000;
+    }
+
+    header.vz-gui-global-header .vz-gui-navbar-collapse li.vz-gui-dropdown .vz-gui-dropdown-menu,
+    header.vz-gui-global-header .vz-gui-navbar-collapse li.vz-gui-dropdown li.vz-gui-dropdown .vz-gui-dropdown-menu {
+        background: #fff none repeat scroll 0 0;
+        border-top: 1px solid #ddd;
+        box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1) ;
+        -moz-box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1) ;
+        -webkit-box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1) ;
+        display: block;
+        left: 0;
+        position: absolute;
+        /*top: 120px;*/
+        width: 100%;
+        z-index: 9;
+    }
+
+    header.vz-gui-global-header .vz-gui-navbar-collapse li.vz-gui-dropdown li.vz-gui-dropdown .vz-gui-dropdown-menu{
+        top: 49px;
+    }
+
+    header.vz-gui-global-header .vz-gui-navbar-collapse li.vz-gui-dropdown .vz-gui-dropdown-menu,header.vz-gui-global-header .vz-gui-navbar-collapse li.vz-gui-dropdown li.vz-gui-dropdown ul.vz-gui-dropdown-menu {
+        display: none;
+    }
+
+    header.vz-gui-global-header .vz-gui-navbar-collapse li.vz-gui-dropdown:hover >.vz-gui-dropdown-menu {
+        /*display: block !important;*/
+        width: 100%;
+    }
+
+    header.vz-gui-global-header .vz-gui-navbar-collapse li.vz-gui-dropdown ul.vz-gui-sub-dropdown li.vz-gui-dropdown:hover .vz-gui-dropdown-menu {
+        top: 50px;
+        display: block;
+        width: 100%;
+        padding-bottom: 30px;
+        padding-top: 15px;
+    }
+
+    header.vz-gui-global-header .vz-gui-navbar-collapse .vz-gui-dropdown.vz-gui-menu-vzweb > ul.vz-gui-dropdown-menu > li.vz-gui-dropdown-content > :first-child, 
+    header.vz-gui-global-header .vz-gui-navbar-collapse .vz-gui-dropdown.vz-gui-menu-aboutYou > ul.vz-gui-dropdown-menu > li.vz-gui-dropdown-content > :first-child {
+        display: none;
+    }
+
+    header.vz-gui-global-header ul.vz-gui-sub-dropdown li.vz-gui-dropdown-content ul > li a {
+        display: inline-block;
+        margin-left: 15px;
+        /*text-transform: capitalize;*/
+        vertical-align: top;
+        word-wrap: break-word;
+        font-weight: 400;
+    }
+
+    header.vz-gui-global-header ul.vz-gui-sub-dropdown li.vz-gui-dropdown-content ul > li a:hover span{
+        color: #cd040b;
+    }
+
+    header.vz-gui-global-header ul.vz-gui-sub-dropdown li.vz-gui-dropdown ul {
+        display: block;
+    }
+
+    header.vz-gui-global-header ul.vz-gui-sub-dropdown li.vz-gui-dropdown-content ul > li a span.vz-gui-icon {
+        vertical-align: middle;
+        width: 65px;
+    }
+
+    header.vz-gui-global-header ul.vz-gui-sub-dropdown li.vz-gui-dropdown-content ul > li a span {
+        display: inline-block;
+        vertical-align: middle;
+        width: 64%;
+        line-height: 18px;
+        padding-right: 10px;
+    }
+    header.vz-gui-global-header .vz-gui-navbar-collapse ul.vz-gui-navbar-nav > li.vz-gui-dropdown > span {
+        display: none;
+        left: 0;
+        padding: 12px 0;
+        position: absolute;
+        right: 0;
+        /*top: 96px;*/
+        width: 100%;
+        z-index: 999;
+    }
+    header.vz-gui-global-header .vz-gui-navbar-collapse ul.vz-gui-navbar-nav > li.vz-gui-dropdown:hover > span {
+        display: block;
+    }
+    header.vz-gui-global-header .vz-gui-navbar-collapse ul.vz-gui-navbar-nav > li:nth-child(1){
+        padding-left: 0;
+    }
+
+    /* Menu Icons */
+
+    header.vz-gui-global-header .vz-gui-icon {
+        background-image:  url('data:image/png;base64,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');
+        background-position: 0 -5280px;
+        background-repeat: no-repeat;
+        padding: 30px 0 32px;
+    }
+
+    header.vz-gui-global-header .vz-gui-navbar-collapse ul.vz-gui-navbar-nav > li a.vz-gui-icon.vz-gui-icon-home {
+        padding-left: 25px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-your-total-rewards{
+        background-position: 0px -109px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-view-paycheck, header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-your-payroll-info{
+        background-position: 0 0;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-hr-contacts{
+        background-position: 0 -1869px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-recognizing-you{
+        background-position: 0 -1759px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-our-credo{
+        background-position: 0 -1539px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-employee-discounts{
+        background-position: 0 -769px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-direct-deposit{
+        background-position: 0 -2859px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-access-w2{
+        background-position: 0 -1429px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-net-benefits{
+        background-position: 0 -2419px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-access-performance-docs{
+        background-position: 0 -219px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-benefits-connection{
+        background-position: 0 -659px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-employee-assistance-program{
+        background-position: 0 -2089px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-anthem-medical{
+        background-position: 0 -989px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-base-pay{
+        background-position:  0 0;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-well-connect{
+        background-position: 0 -2419px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-create-job-opening{
+        background-position: 0 -1099px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-manage-attendance{
+        background-position: 0 -1869px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-onboarding-employee{
+        background-position: 0 -2089px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-talent-ratings{
+        background-position: 0 -2199px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-perform-job-change{
+        background-position: 0 -1649px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-health-benefits{
+        background-position: 0 -2419px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-career-learning{
+        background-position: 0 -3079px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-money{
+        background-position: 0 -2859px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-life-timeoff{
+        background-position: 0 -2749px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-labor-relations{
+        background-position: 0 -2639px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-env-health-safety{
+        background-position: 0 -2969px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-vz-culture{
+        background-position: 0 -3189px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-info-supervisors{
+        background-position: 0 -2529px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-conference-booking{
+        background-position: 0 -4619px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-helpdesk{
+        background-position: 0 -4069px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-learing-portal{
+        background-position: 0 -3079px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-powerful-answers{
+        background-position: 0 -3299px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-whoweare{
+        background-position: 0 -439px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-real-estate{
+        background-position: 0 -3959px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-erp-portal{
+        background-position: 0 -3629px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-vzrequest{
+        background-position: 0 -4399px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-accounts-payable{
+        background-position: 0 0;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-vztime{
+        background-position: 0 -4509px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-travel-arrangements{
+        background-position: 0 -4729px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-intranet-links{
+        background-position: 0 -4289px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-report-security-incident{
+        background-position: 0 -3409px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-report-service-issue{
+        background-position: 0 -1319px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-vzdelivery{
+        background-position: 0 -3849px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-cab-booking{
+        background-position: 0 -4949px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-vdsi-access-request{
+        background-position: 0 -1979px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-leave-management-system{
+        background-position: 0 -879px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-travel-request{
+        background-position: 0 -4729px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-repair-maintenance{
+        background-position: 0 -549px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-create-ticket{
+        background-position: 0 -1319px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-vdsi-asset-management{
+        background-position: 0 -1869px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-parking-slot{
+        background-position: 0 -4949px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-raise-exception{
+        background-position: 0 -5059px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-peoplesoft{
+        background-position: 0 -3299px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-time-reporting{
+        background-position: 0 -2309px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-acsr{
+        background-position: 0 -1319px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-my-info{
+        background-position: 0 -439px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-cetom{
+        background-position: 0 -5169px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-my-vzfiles{
+        background-position: 0 -4839px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-401k, header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-manage-your-401k{
+        background-position: 0 -329px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-time{
+        background-position: 0 -879px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-search-job{
+        background-position: 0 -1209px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-it-security{
+        background-position: 0 -3519px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-finance{
+        background-position: 0 -3739px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-wbds{
+        background-position: 0 -4179px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-chief-admin-office{
+        background-position: 0 -439px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-credo{
+        background-position: 0 -1539px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-our-purpose{
+        background-position: 0 -1759px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-partner-solutions{
+        background-position: 0 -2089px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-customer-service{
+        background-position: 0 -2089px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-compliance{
+        background-position: 0 -2199px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-commitment-values{
+        background-position: 0 -2199px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-vds-india{
+        background-position: 0 -2529px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-policy-law-security{
+        background-position: 0 -3519px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-verizon-intranet{
+        background-position: 0 -4399px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-code-conduct{
+        background-position: 0 -5389px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-corporate-communications{
+        background-position: 0 -5499px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-vzw-news, header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-daily-news-roundup{
+        background-position: 0 -5609px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-data-internet-services{
+        background-position: 0 -5719px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-device-technology{
+        background-position: 0 -5829px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-diversity-strategy{
+        background-position: 0 -5939px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-human-resources{
+        background-position: 0 -5939px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-enterprise-government{
+        background-position: 0 -6049px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-finance{
+        background-position: 0 -6159px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-fleet-operations{
+        background-position: 0 -6269px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-global-real-estate{
+        background-position: 0 -6379px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-go-green, header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-green-sustainability{
+        background-position: 0 -6489px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-technology, header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-information-technology{
+        background-position: 0 -6599px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-legal-corp-security{
+        background-position: 0 -6709px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-marketing-sales-operations{
+        background-position: 0 -6819px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-national-telesales{
+        background-position: 0 -6929px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-network{
+        background-position: 0 -7039px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-operational-excellence, header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-vlss, header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-vlss-resource-center{
+        background-position: 0 -7149px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-product-new-business{
+        background-position: 0 -7259px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-product-development{
+        background-position: 0 -7369px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-strategy-development-planning{
+        background-position: 0 -7479px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-supply-chain-services, header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-supply-chain-mgmt{
+        background-position: 0 -7589px; 
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-v2v{
+        background-position: 0 -7699px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-verizon-awards{
+        background-position: 0 -7809px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-verizon-foundation{
+        background-position: 0 -7919px;
+    }
+    header.vz-gui-global-header .vz-gui-icon.vz-gui-icon-wireline-network-operations{
+        background-position: 0 -8029px;
+    }
+    header.vz-gui-global-header #vz-gui-profile-menu > a {
+        display: block;
+        text-align: right;
+        outline: none;
+    }
+    header.vz-gui-global-header #vz-gui-profile-menu {
+        padding: 0 0 0 12px;
+        margin: 0 10px;
+        max-width: 290px;
+        width: auto;
+        border-top: none;
+        padding: 0;
+        top: 20px;
+        right: 0;
+    }
+
+    header.vz-gui-global-header #vz-gui-profile-menu .vz-gui-profile-dropdown {
+        border: 1px solid #eeeeee;
+        box-shadow: 0 12px 18px rgba(0, 0, 0, 0.25);
+        left: auto;
+        margin-top: 70px;
+        right: 0;
+        top: -20px;
+        padding: 0;
+    }
+
+    header.vz-gui-global-header .vz-gui-result .vz-gui-avatar {
+        width: 16%;
+    }
+    header.vz-gui-global-header .vz-gui-result .vz-gui-people-info {
+        width: 84%;
+    }
+
+    header.vz-gui-global-header .vz-gui-profile-dropdown .vz-gui-ui-tooltip-tip {
+        display: block;
+    }
+
+    header.vz-gui-global-header .vz-gui-search-inner {
+        float: right;
+        position: relative;
+        width: auto;
+        /*display: block !important;*/
+        display:none; /*Developer change -11/18/2016*/
+        height: auto;
+        z-index: 1;
+        margin-right: 10px;
+    }
+    header.vz-gui-global-header #vz-gui-search-form .vz-gui-form-submit {
+        background-position: -10px -272px;
+    }
+    header.vz-gui-global-header #vz-gui-search-form .vz-gui-form-submit:hover{
+        background-position: -10px -391px;
+    }
+    header.vz-gui-global-header .vz-gui-search-options {
+        float: left;
+        height: 29px;
+        margin-top: -5px;
+        width: 225px;
+        position: static;
+    }
+
+    header.vz-gui-global-header .vz-gui-search-mobile-close {
+        display: none;
+    }
+    header.vz-gui-global-header .vz-gui-search-clear {
+        top: 3px;
+        right: 6px;
+        z-index: 1000;
+        opacity: 1 !important;
+    }
+    header.vz-gui-global-header .vz-gui-search-clear:hover{
+        background-position: -9px -1942px;
+    }
+    header.vz-gui-global-header .vz-gui-search-overlay-top {
+        max-height: 400px;
+        min-width: 255px;
+        top: 48px;
+    }
+    header.vz-gui-global-header .vz-gui-glyphicon-plus{
+        padding: 12px;
+        display: inline-block;
+        background-position: -10px -2858px;
+        opacity: 0.5;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+    header.vz-gui-global-header .vz-gui-glyphicon-plus:hover{
+        opacity: 1;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+        header.vz-gui-global-header ul.vz-gui-sub-dropdown li.vz-gui-dropdown:hover h3 {
+          padding-bottom: 14px;
+        }
+    }
+
+/* Smart Search badge button - Search Intro Tooltip */
+
+@media all and (min-width: 768px){
+    header.vz-gui-global-header .vz-gui-glyphicon.vz-gui-glyphicon-triangle-top.vz-gui-smartsearch-arrow, 
+    header.vz-gui-global-header .vz-gui-glyphicon.vz-gui-glyphicon-triangle-top.vz-gui-advsearch-arrow {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAVBAMAAADhmjDFAAAAHlBMVEUAAAAAAAAAAADJycno6Ojs7OzU1NTs7OzPz8////+EfqnIAAAACXRSTlMABglH9OtC7SQqye1bAAAAdklEQVQoz73MsQmAMBCFYW+DnEX6RHAAwQkEd7AVxBW0zA6C3LYeiFzxcq2v/fle88NI57XAsQTyGu8HMzktnnepV+J2E5kThxps+0XkWhPSQJxH0U1ZKZ52CpUOQOmFDv2gUYBGEQIFaBSgUYRGASI1iNQg0gcuH1kaTBOUpAAAAABJRU5ErkJggg==");
+        left: 81%;
+        position: absolute;
+        top: -23px;
+        z-index: 1007;
+        padding: 12px;
+        width: 45px;
+        background-repeat: no-repeat;
+        background-position: 0 1px;
+    }
+    header.vz-gui-global-header .vz-gui-glyphicon.vz-gui-glyphicon-triangle-top.vz-gui-advsearch-arrow{
+        float: right;
+        margin-right: -7px;
+        margin-top: -37px;
+        position: static;
+        width: 22px;
+    }
+    header.vz-gui-global-header .vz-gui-app-name{
+        display: none !important;
+    }
+}
+
+@media all and (min-width: 960px) {
+  header.vz-gui-global-header .vz-gui-stocks{
+    display: block;
+    text-align: left;
+    position: relative;
+  }
+  header.vz-gui-global-header .vz-gui-navbar.vz-gui-navbar-default .vz-gui-container {
+        width: 960px;
+        padding: 0;
+    }
+    header.vz-gui-global-header .vz-gui-navbar-collapse ul.vz-gui-navbar-nav > li:nth-child(3){
+        padding-right: 220px;
+    }
+    header.vz-gui-global-header .vz-gui-navbar-collapse ul.vz-gui-navbar-nav.vz-gui-custom-nav > li:nth-child(3){
+        padding-right: 18px;
+    }
+    header.vz-gui-global-header li.vz-gui-dropdown-content {
+        display: block !important;
+        margin: 0 auto !important;
+        width: 960px;
+    }
+
+  /* Custom Header Width */
+  body.vz-gui-fullwidth header.vz-gui-global-header .vz-gui-navbar.vz-gui-navbar-default .vz-gui-container,
+  body.vz-gui-fullwidth header.vz-gui-global-header li.vz-gui-dropdown-content{
+    width: 100% !important;
+  }
+  body.vz-gui-fullwidth header.vz-gui-global-header .vz-gui-stock-quotes{
+    width: 99% !important;
+  }
+  body.vz-gui-fullwidth header.vz-gui-global-header ul.vz-gui-sub-dropdown li.vz-gui-dropdown-content ul > li a span.vz-gui-icon {
+    width: 75px;
+  }
+
+  body.vz-gui-defaultwidth header.vz-gui-navbar.vz-gui-navbar-default .vz-gui-container,
+  body.vz-gui-defaultwidth header.vz-gui-global-header li.vz-gui-dropdown-content{
+    width: 960px;
+  }
+
+}
+
+@media all and (min-width: 1200px){
+      /* Bootstrap override */
+  body.vz-gui-bootstrap-body header.vz-gui-global-header .vz-gui-navbar.vz-gui-navbar-default .vz-gui-container,
+  body.vz-gui-bootstrap-body header.vz-gui-global-header li.vz-gui-dropdown-content, 
+  body.vz-gui-expandedwidth header.vz-gui-global-header .vz-gui-navbar.vz-gui-navbar-default .vz-gui-container,
+  body.vz-gui-expandedwidth header.vz-gui-global-header li.vz-gui-dropdown-content{
+      width: 1170px;
+  }
+
+  body.vz-gui-expandedwidth header.vz-gui-global-header ul.vz-gui-sub-dropdown li.vz-gui-dropdown-content ul > li a span.vz-gui-icon {
+    width: 75px;
+  }
+
+  body.vz-gui-expandedwidth header.vz-gui-global-header .vz-gui-stock-quotes,
+  body.vz-gui-bootstrap-body header.vz-gui-global-header .vz-gui-stock-quotes{
+    width: 1155px;
+  }
+
+}
+
+@media all and (min-width: 767px) and (max-width: 1024px) {
+  header.vz-gui-global-header .vz-gui-navbar-collapse > ul > li > ul{
+    padding: 0;
+  }
+  header.vz-gui-global-header ul.vz-gui-sub-dropdown > li {
+    padding: 15px 0 15px 20px;
+  }
+  header.vz-gui-global-header .vz-gui-navbar-collapse li.vz-gui-dropdown li.vz-gui-dropdown ul.vz-gui-dropdown-menu li.vz-gui-dropdown-content ul li{
+    width: 24%;
+  }
+  header.vz-gui-global-header ul.vz-gui-sub-dropdown li.vz-gui-dropdown-content ul > li a span {
+    width: 53%;
+  }
+  header.vz-gui-global-header .vz-gui-search-form {
+    left: 36%;
+    position: absolute;
+    top: 23px;
+  }
+  header.vz-gui-global-header .vz-gui-glyphicon.vz-gui-glyphicon-triangle-top.vz-gui-smartsearch-arrow{
+    display: none !important;
+  }
+}
+
+/* Mobile overrides that comes from javascript */
+@media all and (max-width: 767px) {
+  header.vz-gui-global-header #vz-gui-search-span-arrow{
+    display: none !important;
+  }
+  header.vz-gui-global-header ul.vz-gui-navbar-nav > li.vz-gui-dropdown > a {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAATkCAMAAAA+ZyJKAAAAyVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACVlZUAAAAAAAAAAADNBAuVlZWSkpIAAADNBAuVlZWVlZWVlZWVlZWVlZXNBAsAAAAAAACVlZWVlZXNBAvNBAsAAADNBAuVlZXNBAvNBAuVlZWVlZWVlZX+/v6VlZXMzMz9/f3NBAsAAADNBAvNBAvNBAv7+/v6+vrNBAv09PTw8PDNBAvNBAvNBAv7+/v09PTo6Ojl5eXU1NQAAACVlZXNBAv///97kV0fAAAAP3RSTlMABGDxMKAPwNCACCDwC5BA8DAf4NBAwJCAEBCwb2DQoIBRsKBuX+BwUPGwPOKQS0A9MNPEwJdmUyDgw6d7a030p4T0AAADq0lEQVR42u3c2W4aMRiGYXc2zwQCFJgChSZsCTRtlu577eH+L6q2mamJxzaVmpYgfc9BCOKV/RvnBAmFGLIwIG6MZck4bfdavmScxkF4Q2niTlgQix+TVi9yJeFNyqR40rMOlMTpTci20lkaW5IszthvYTDOHLNohBw+EY9HkgAAAAAAAMDjc3v7mZDzYulJimL6vD+/658/9yTzznTaWZ73P7uTzsW8KIrrZeeTK+l/+lJI7+86U1sgxlh2iq3OXX9uGehiel1oF9dL60a7CDl8Ih6PJAEAAAAAAIADyfOc+Lw449LVC1fwVAXK2VN70RQvrXKSDy45b9qabpM3V2RrJZpRPXnGea6H4nxR34bzIdEGnHfNZHB/6S7nq/o+C+P5MzNpqn20YT3h+5MzPiC7rurJgl8aGw/MZM357s2sqndJ65JLeWp9GeY+owHPc3l5uuDydy0X93Y5GoqLGTyVwYKLXY0lhKuRvBhRPVM/ZaHJorlWAy2aXFl0jXdELVFaD4fD9YgYuusXBAAAAAAAAB6vxiTLslniDtqUbcUNR5ExgdJUfefeWrTkK4ncLQsZszUzxtJqiChkoWWvHuvpMSMxj22R9v25kvokvXunt0xDjZVTltWTzHhuSVr7kpilZEfC2MRMgvJE+mmDmEJGdxapnmlRGk123q0klWuaF5iSMWO0vd2lx4xhI3W3USIa1mtlsQiM40VMoHK4Sci2eu36H0F1wFlMKW3NiCHKxg0CAAAAAAAAB9PYF8hPhq5If+xk+4vYO8beIgpF0dpbBN5ddOGSeefwr+KfxX8i//vilfxp85c3reBDPAAAAAAAwH/yvvOGSBfF1JXMC9HIwv0vAp73RSOLc0J8zVQV3kYV/kYV/uaWAAAAAAAAwIMIJkRJsrYroSxWRcoy5yqMxaoII+JrdOFsQlV4G1X4GxoRAAAAAAAAeCwiSgNSalE6syRt/X3Z2PG12IjJpirCBrEIVFMWESHuRhfORhfORhUeVCaZr4iZEviL0NNUpw08TXVad9Mui7KJrIkqqqZtv2lVqCZUtV9CAAAAAAAA4NBYzUMmGPeoxgUAAAAAAIDDeKJ4g4q70NzFycnHjycnqnEVp69evnx16mpU0X292bzunsqFHEXybiO8TdQ69uLDRvmmG7P4sSl9tzTlqJvKz1PRGEk5aqU8lrmIGFV727UkalTtq0oAAAAAAADgOHDOjyThux4mefyH/p0AAAAAAADAMfm3n2F/AQQvDNHYiB37AAAAAElFTkSuQmCC');
+    background-repeat: no-repeat;
+  }
+  header.vz-gui-global-header ul.vz-gui-navbar-nav > li.vz-gui-dropdown > a {
+    background-position: 98% -1113px !important;
+  }
+  header.vz-gui-global-header ul.vz-gui-navbar-nav > li.vz-gui-dropdown > a[toggle="vz-gui-expanded"] {
+    background-position: 98% -1221px !important;
+    margin-bottom: -1px;
+  }
+  header.vz-gui-global-header .vz-gui-nav.vz-gui-navbar-nav{
+    background-color: #f6f6f6;
+    border-bottom: 1px solid #cccccc;
+    box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 65px;
+    width: 100%;
+  }
+  header.vz-gui-global-header ul.vz-gui-sub-dropdown > li{
+    padding-left: 50px;
+  }
+  header.vz-gui-global-header .vz-gui-glyphicon.vz-gui-glyphicon-triangle-top.vz-gui-smartsearch-arrow{
+    display: none !important;
+  }
+  header.vz-gui-global-header.vz-gui-global-header-custom-menu .vz-gui-app-name{
+    margin-left: 40px;
+  }   
+}
+@media all and (min-width: 380px) and (max-width: 767px){
+    header.vz-gui-global-header .vz-gui-search-options{
+        width: 94%;
+    }
+}
+
+header.vz-gui-global-header .vz-gui-result.vz-gui-active, 
+header.vz-gui-global-header .vz-gui-result.vz-gui-active div, 
+header.vz-gui-global-header .vz-gui-result:hover,
+header.vz-gui-global-header .vz-gui-people-info:hover{
+    background-color: #333;
+    cursor: pointer;
+}
+
+
+header.vz-gui-global-header .vz-gui-result:hover .vz-gui-title.vz-gui-title-name h4,
+header.vz-gui-global-header .vz-gui-result:hover .vz-gui-title.vz-gui-title-name h4 strong,
+header.vz-gui-global-header .vz-gui-result:hover .vz-gui-title.vz-gui-title-job,
+header.vz-gui-global-header .vz-gui-result:hover .vz-gui-title.vz-gui-title-lob,
+header.vz-gui-global-header .vz-gui-result:hover .vz-gui-title.vz-gui-title-phone,
+header.vz-gui-global-header .vz-gui-result:hover .vz-gui-title.vz-gui-title-email a,
+
+header.vz-gui-global-header .vz-gui-result.vz-gui-active .vz-gui-title.vz-gui-title-name h4,
+header.vz-gui-global-header .vz-gui-result.vz-gui-active .vz-gui-title.vz-gui-title-name h4 strong,
+header.vz-gui-global-header .vz-gui-result.vz-gui-active .vz-gui-title.vz-gui-title-job,
+header.vz-gui-global-header .vz-gui-result.vz-gui-active .vz-gui-title.vz-gui-title-lob,
+header.vz-gui-global-header .vz-gui-result.vz-gui-active .vz-gui-title.vz-gui-title-phone,
+header.vz-gui-global-header .vz-gui-result.vz-gui-active .vz-gui-title.vz-gui-title-email a,
+
+
+header.vz-gui-global-header .vz-gui-result:hover div a strong,
+header.vz-gui-global-header .vz-gui-result:hover div a,
+ header.vz-gui-global-header .vz-gui-result:hover > div,
+header.vz-gui-global-header .vz-gui-result:hover > div strong,
+header.vz-gui-global-header .vz-gui-result.vz-gui-active div a strong,
+header.vz-gui-global-header .vz-gui-result.vz-gui-active div a,
+ header.vz-gui-global-header .vz-gui-result.vz-gui-active > div,
+header.vz-gui-global-header .vz-gui-result.vz-gui-active > div strong
+{
+
+	color:#fff;
+}  
+
+/** Modal Styles **/
+.vz-gui-modal-overlay {
+    background: #333333 none repeat scroll 0 0;
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1010;
+}
+.vz-gui-modal-wrapper {
+    background: #ffffff none repeat scroll 0 0;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-height: 500px;
+    padding: 15px 15px 35px;
+    position: absolute;
+    top: auto;
+    width: 80%;
+    z-index: 1011;
+}
+.vz-gui-modal-wrapper p{
+    padding: 0;
+}
+.vz-gui-modal-wrapper input[type="text"]{
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    border-radius: 0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555555;
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1.42857;
+    padding: 6px 2%;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 96%;
+    box-sizing: content-box;
+}    
+.vz-gui-modal-wrapper .vz-gui-modal-container > div > ul {
+    list-style: outside none none;
+    margin-bottom: 25px;
+    max-height: 235px !important;
+    overflow-x: auto !important;
+    padding: 0;
+}
+.vz-gui-modal-wrapper .vz-gui-modal-container ul li{
+    padding: 5px 0;
+}
+.vz-gui-modal-wrapper .vz-gui-modal-container ul li a{
+    text-decoration: none;
+    color: #0066CC;
+    cursor: pointer;
+}
+.vz-gui-modal-wrapper .vz-gui-modal-container ul li a:hover{
+    text-decoration: underline;
+}
+.vz-gui-modal-wrapper .vz-gui-modal-container h2{
+    margin-top: 0;
+}
+.vz-gui-modal-wrapper .vz-gui-modal-close{
+    background-position: -10px -824px;
+    opacity: 0.4;
+    padding: 15px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+}
+.vz-gui-modal-wrapper .vz-gui-modal-close:hover{
+    opacity: 1;
+}
+
+/* Autosuggest Overlay Styles */
+.vz-gui-modal-wrapper .vz-gui-modal-container .vz-gui-favorites-overlay{
+    position: relative;
+}
+.vz-gui-modal-wrapper .vz-gui-modal-container .vz-gui-favorites-overlay > div {
+    background-color: #f6f6f6;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3);
+    height: auto;
+    left: 0;
+    max-height: 225px;
+    overflow-y: auto;
+    padding: 10px 0;
+    position: absolute;
+    right: 0;
+    top: -10px;
+    width: 100.4%;
+    z-index: 100;
+}
+.vz-gui-modal-wrapper .vz-gui-modal-container .vz-gui-favorites-overlay ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.vz-gui-modal-wrapper .vz-gui-modal-container .vz-gui-favorites-overlay ul li{
+    padding: 0;
+}
+.vz-gui-modal-wrapper .vz-gui-modal-container .vz-gui-favorites-overlay ul li:hover{
+    background: #333333 none repeat scroll 0 0;
+}
+.vz-gui-modal-wrapper .vz-gui-modal-container .vz-gui-favorites-overlay ul li:hover a{
+    color: #fff;
+    text-decoration: none;
+}
+.vz-gui-modal-wrapper .vz-gui-modal-container .vz-gui-favorites-overlay ul li a{
+    color: #0066CC;
+    padding: 5px 10px;
+    display: block;
+}
+.vz-gui-modal-wrapper .vz-gui-modal-container .vz-gui-favorites-input-wrapper{
+    position: relative;
+}
+.vz-gui-modal-wrapper .vz-gui-modal-container .vz-gui-fav-search-clear {
+    background-position: -9px -2286px;
+    cursor: pointer;
+    padding: 12px 13px;
+    position: absolute;
+    right: 14px;
+    top: 12px;
+    background-color: #fff;
+    opacity: 1;
+}
+.vz-gui-modal-wrapper .vz-gui-modal-container .vz-gui-fav-search-clear:hover{
+    background-position: -9px -1942px;
+}
+.vz-gui-modal-wrapper .vz-gui-modal-container .vz-gui-input-search-favorites {
+    margin-bottom: 10px;
+}
+.vz-gui-modal-wrapper .vz-gui-modal-container label {
+    font-size: 14px;
+    font-weight: normal;
+}
+.vz-gui-modal-wrapper .vz-gui-modal-container .vz-gui-favorites-link-exists {
+    color: #CD040B;
+    font-style: italic;
+    padding: 10px 0 0;
+    text-align: center;
+}
+@media all and (min-width: 767px){
+    .vz-gui-modal-wrapper {
+        left: 0;
+        margin: 0 auto;
+        right: 0;
+        top: auto;
+        width: 400px;
+    }
+}
+.vz-gui-btn{
+    padding: 15px 30px !important;
+    background: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+    border: none !important;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+.vz-gui-btn-sm{
+    padding: 10px 30px !important;
+}
+.vz-gui-btn:hover{
+    text-decoration: none;
+}
+.vz-gui-btn.vz-gui-btn-primary {
+    background: #cd040b none repeat scroll 0 0;
+    border: medium none;
+    box-shadow: none;
+    color: #ffffff;
+    font-size: 14px;
+    text-shadow: none;
+}
+.vz-gui-btn.vz-gui-btn-primary:hover{
+    background-color: #a80309;
+}
+.vz-gui-btn.vz-gui-btn-primary:active{
+    background-color: #990308;
+}
+.vz-gui-brand-red{
+    color: #CD040B;
+}
+.vz-gui-global-header .vz-gui-brand-red{
+    color: #CD040B;
+}
+.vz-gui-icon-delete {
+    background-position: -15px -2515px;
+    padding: 5px 15px;
+}
+.vz-gui-icon-preview {
+    background-position: -5px -2730px;
+    padding: 15px;
+    opacity: 0.25;
+}
+.vz-gui-icon-preview:hover{
+    opacity: 1;
+}
+.vz-gui-icon-delete:hover, .vz-gui-deleted .vz-gui-icon-delete{
+    background-position: -15px -2627px;
+}
+.vz-gui-btn[disabled="disabled"], .vz-gui-btn[disabled="disabled"]:hover {
+    background: #e2e4e1 none repeat scroll 0 0;
+    border: medium none !important;
+    border-radius: 0 !important;
+    box-shadow: none;
+    color: #000000;
+    opacity: 1;
+    pointer-events: none;
+}
+.vz-gui-green{
+    color: green;
+}
+.vz-gui-deleted{
+    color: #cd040b;
+    text-decoration: line-through;
+}

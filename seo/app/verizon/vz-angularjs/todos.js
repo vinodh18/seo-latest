@@ -1,0 +1,167 @@
+
+function vzguiRenderTodos(data) {
+	if (document.getElementById("vz-gui-profile-dropdown") != null) { 	// Test if the global header functionality is present and that it is finished loading enough to be ready to add the quotes
+       VZGLOBALUI.todos.constuct(data);
+	} else {
+       setTimeout(function() { vzguiRenderTodos(data); } , 100);
+	}
+}
+
+/*********
+ * CASE 1: TODOS count zero
+ */
+/*
+vzguiRenderTodos({
+  "todoscount":0,
+  "todos":[],
+  "isInternal":true
+});
+*/
+/**********
+ * CASE 2: TODOS count greater than zero
+ */
+
+vzguiRenderTodos({
+  "todoscount":3,
+  "todos":[
+    {
+      "providerId":"payroll",
+      "definition_id":"w2",
+      "recipient_id":"6176369822",
+      "toDoId":"6176369822",
+      "pulishDate":"2016-01-20",
+      "expirirationDate":"2016-02-16",
+      "params":null,
+      "dueDate":null,
+      "completedDate":null,
+      "toDoStatus":"Expired",
+      "historyToDosDate":"2016-02-16",
+      "lastUpdatedDate":null,
+      "remove":false,
+      "intranet_url":"https://ps-prdsso.ehr.verizon.com/psp/vzehpra/EMPLOYEE/HRMS/c/B_VZC_PAYROLL_MENU.B_PY_ESS_W2.GBL",
+      "extranet_url":"",
+      "url":"https://ps-prdsso.ehr.verizon.com/psp/vzehpra/EMPLOYEE/HRMS/c/B_VZC_PAYROLL_MENU.B_PY_ESS_W2.GBL",
+      "subject":"Your Electronic W-2 is now available.",
+      "priority":"w",
+      "defaultParams":null,
+      "completeByOnClick":false,
+      "delegated":false
+    },
+    {
+      "providerId":"ITM",
+      "definition_id":"itm_completedp",
+      "recipient_id":"6176369822",
+      "toDoId":"78357",
+      "pulishDate":"2016-01-07",
+      "expirirationDate":"2016-09-30",
+      "params":null,
+      "dueDate":null,
+      "completedDate":null,
+      "toDoStatus":"Expired",
+      "historyToDosDate":"2016-09-30",
+      "lastUpdatedDate":1452173543000,
+      "remove":false,
+      "intranet_url":"https://csbst.vzwcorp.com/vz/itm/developmentplan.aspx",
+      "extranet_url":"",
+      "url":"https://csbst.vzwcorp.com/vz/itm/developmentplan.aspx",
+      "subject":"Complete Your Development Plan",
+      "priority":"w",
+      "defaultParams":null,
+      "completeByOnClick":false,
+      "delegated":false
+    },
+    {
+      "providerId":"payroll",
+      "definition_id":"Paystub",
+      "recipient_id":"2416789545",
+      "toDoId":"3",
+      "pulishDate":"2013-06-18",
+      "expirirationDate":"2022-09-07",
+      "params":null,
+      "dueDate":null,
+      "completedDate":null,
+      "toDoStatus":"Expired",
+      "historyToDosDate":"2022-09-07",
+      "lastUpdatedDate":1362672865115,
+      "remove":false,
+      "intranet_url":"https://psvz-devsso.ehr.verizon.com/psp/vzehtsb/EMPLOYEE/HRMS/c/ROLE_EMPLOYEE.PY_IC_PAY_INQ.GBL",
+      "extranet_url":"",
+      "url":"https://psvz-devsso.ehr.verizon.com/psp/vzehtsb/EMPLOYEE/HRMS/c/ROLE_EMPLOYEE.PY_IC_PAY_INQ.GBL",
+      "subject":"Your online paystub is available1.",
+      "priority":"w",
+      "defaultParams":null,
+      "completeByOnClick":true,
+      "delegated":false
+    },
+    {
+      "providerId":"payroll",
+      "definition_id":"Paystub",
+      "recipient_id":"2416789545",
+      "toDoId":"3",
+      "pulishDate":"2013-06-18",
+      "expirirationDate":"2022-09-07",
+      "params":null,
+      "dueDate":null,
+      "completedDate":null,
+      "toDoStatus":"Expired",
+      "historyToDosDate":"2022-09-07",
+      "lastUpdatedDate":1362672865115,
+      "remove":false,
+      "intranet_url":"https://psvz-devsso.ehr.verizon.com/psp/vzehtsb/EMPLOYEE/HRMS/c/ROLE_EMPLOYEE.PY_IC_PAY_INQ.GBL",
+      "extranet_url":"",
+      "url":"https://psvz-devsso.ehr.verizon.com/psp/vzehtsb/EMPLOYEE/HRMS/c/ROLE_EMPLOYEE.PY_IC_PAY_INQ.GBL",
+      "subject":"Your online paystub is available 2.",
+      "priority":"w",
+      "defaultParams":null,
+      "completeByOnClick":true,
+      "delegated":false
+    },
+    {
+      "providerId":"payroll",
+      "definition_id":"Paystub",
+      "recipient_id":"2416789545",
+      "toDoId":"3",
+      "pulishDate":"2013-06-18",
+      "expirirationDate":"2022-09-07",
+      "params":null,
+      "dueDate":null,
+      "completedDate":null,
+      "toDoStatus":"Expired",
+      "historyToDosDate":"2022-09-07",
+      "lastUpdatedDate":1362672865115,
+      "remove":false,
+      "intranet_url":"https://psvz-devsso.ehr.verizon.com/psp/vzehtsb/EMPLOYEE/HRMS/c/ROLE_EMPLOYEE.PY_IC_PAY_INQ.GBL",
+      "extranet_url":"",
+      "url":"https://psvz-devsso.ehr.verizon.com/psp/vzehtsb/EMPLOYEE/HRMS/c/ROLE_EMPLOYEE.PY_IC_PAY_INQ.GBL",
+      "subject":"Your online paystub is available 3.",
+      "priority":"w",
+      "defaultParams":null,
+      "completeByOnClick":true,
+      "delegated":false
+    },
+    {
+      "providerId":"payroll",
+      "definition_id":"Paystub",
+      "recipient_id":"2416789545",
+      "toDoId":"3",
+      "pulishDate":"2013-06-18",
+      "expirirationDate":"2022-09-07",
+      "params":null,
+      "dueDate":null,
+      "completedDate":null,
+      "toDoStatus":"Expired",
+      "historyToDosDate":"2022-09-07",
+      "lastUpdatedDate":1362672865115,
+      "remove":false,
+      "intranet_url":"https://psvz-devsso.ehr.verizon.com/psp/vzehtsb/EMPLOYEE/HRMS/c/ROLE_EMPLOYEE.PY_IC_PAY_INQ.GBL",
+      "extranet_url":"",
+      "url":"https://psvz-devsso.ehr.verizon.com/psp/vzehtsb/EMPLOYEE/HRMS/c/ROLE_EMPLOYEE.PY_IC_PAY_INQ.GBL",
+      "subject":"Your online paystub is available 4.",
+      "priority":"w",
+      "defaultParams":null,
+      "completeByOnClick":true,
+      "delegated":false
+    }
+  ],
+  "isInternal":true
+});

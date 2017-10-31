@@ -1,0 +1,92 @@
+{
+"Seo_AnalysisReport": [{
+		"keyword": "iphone",
+		"analysisId": "2017-07-21 16:23:10",
+		"analysisDate": "2017-07-21 16:23:10",
+		"urlSerp":  [{
+					"url": "https://www.verizonwireless.com/iPhone/iPhone_7?featuretab=6%20Months%20Half%20Price",
+					"serp": "14",
+					"urlCode": "vz",
+					"newCompetitor": 0
+					},
+					{
+					 "url": "https://www.apple.com/newcompi",
+					 "serp": "3",
+					 "urlCode": "nvz",
+					 "newCompetitor": 1
+					},
+					{
+					"url": "https://www.motorola.com/",
+					"serp": "2",
+					"urlCode": "nvz",
+					"newCompetitor": 1
+					},
+					{
+					"url": "https://www.amazon.com/",
+					"serp": "15",
+					"urlCode": "nvz",
+					"newCompetitor": 0
+					}]
+
+	},
+	{
+	 "keyword": "verizonsim",
+	 "analysisId": "2017-07-21 16:23:10",
+	 "analysisDate": "2017-07-21 16:23:10",
+	 "urlSerp": [{
+				"url": "https://www.verizonwireless.com/iPhone/iPhone_7",
+				"serp": "14",
+				"urlCode": "vz",
+				"newCompetitor": 0
+				},
+				{
+				"url": "https://www.apple.com/",
+				"serp": "15",
+				"urlCode": "nvz",
+				"newCompetitor": 0
+				},
+				{
+				"url": "https://www.motorola.com/",
+				"serp": "2",
+				"urlCode": "nvz",
+				"newCompetitor": 1
+				},
+				{
+				"url": "https://www.amazon.com/",
+				"serp": "4",
+				"urlCode": "nvz",
+				"newCompetitor": 1
+				}]
+
+	},
+	{
+	 "keyword": "verizonmobile",
+	 "analysisId": "2017-07-21 16:23:10",
+	 "analysisDate": "2017-07-21 16:23:10",
+	 "urlSerp": [{
+				"url": "https://www.verizonwireless.com/iPhone/iPhone_7?featuretab=6Months",
+				"serp": "12",
+				"urlCode": "vz",
+				"newCompetitor": 0
+				},
+				{
+				"url": "https://www.apple.com/",
+				"serp": "3",
+				"urlCode": "nvz",
+				"newCompetitor": 1
+				},
+				{
+				"url": "https://www.motorola.com/",
+				"serp": "2",
+				"urlCode": "nvz",
+				"newCompetitor": 1
+				},
+				{
+				"url": "https://www.amazon.com/",
+				"serp": "18",
+				"urlCode": "nvz",
+				"newCompetitor": 0
+				}]
+
+	}]
+}

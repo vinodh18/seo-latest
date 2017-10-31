@@ -1,0 +1,27 @@
+    <div class="row">
+        <div>
+          <input type="daterange" ng-model="dates4" ranges="ranges" style="margin: 0px 17px;">
+        </div>
+    </div>
+    <br><br>
+
+
+    <div ng-init="chart()">
+        
+        <div class="panel panel-default">
+            <div class="panel-heading"><span class="fa fa-bar-chart-o fa-fw"></span>
+             Flow Chart</div>
+            <div class="panel-body">
+
+                <span><strong>Visibility</strong></span>
+                <div id="morris-area-chart"></div>                            
+                        
+                 <canvas id="line" class="chart chart-line" chart-data="data"
+            chart-labels="labels" chart-series="series" chart-options="options"
+            chart-dataset-override="datasetOverride" chart-click="onClick">
+            </canvas>
+            </div>
+        </div>
+
+       
+    </div>

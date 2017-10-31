@@ -1,0 +1,118 @@
+      <table class="table table-bordered table-responsive">
+                <thead>
+                <tr>
+                  <th> <input type="search" class="form-control input-sm" ng-model="search.keyword" placeholder="" aria-controls="dataTables-example"></th>
+
+                  <th><input type="search" class="form-control input-sm" ng-model="searchUrl" placeholder="" aria-controls="dataTables-example"></th>
+
+                  <th><input type="search" class="form-control input-sm" ng-model="serp" placeholder="" aria-controls="dataTables-example"></th>
+
+                  <th><input type="search" class="form-control input-sm" ng-model="ahead" placeholder="" aria-controls="dataTables-example"></th>
+
+                  <th><input type="search" class="form-control input-sm" ng-model="search.new" placeholder="" aria-controls="dataTables-example"></th>
+                 
+                 <th><input type="search" class="form-control input-sm" ng-model="search.behined" placeholder="" aria-controls="dataTables-example"></th>
+
+                </tr>
+                  <tr>
+                    <th>Keywords</th>
+                    <th>view Url</th>
+                    <th>Postion G.C.S</th>
+                    <th>Competition Ahead</th>
+                    <th>New Competitor</th>
+                    <th>Behind Competitor</th>
+                  </tr>
+                </thead>
+               <!--  <tr dir-paginate="spec in url_data | filter:q | itemsPerPage: pageSize | filter: search | filter:search as results " current-page="currentPage" pagination-id="desktopPag"> -->
+               <tbody>
+
+                <tr dir-paginate="craw in keydata | filter: searchfilter | filter: search | filter: serp | filter: ahead |
+                  filter:ahead |itemsPerPage: pageSize | filter:searchUrl as results"  current-page="currentPage" pagination-id="desktopPag">
+                    <td class="col-md-2"> 
+                      <a href="#" ng-click="changeProducts('lg', 1, craw)">
+                      {{craw.keyword}}
+                      </a>
+                    </td>
+                    
+                    <td class="brk-word">
+                      <span ng-repeat="crawinner in craw.urlSerp">
+                        <a href="" ng-if="crawinner.urlCode == 'vz'">
+                        {{crawinner.url}}
+                        </a>
+                      </span>
+                    </td>
+
+                    <td>
+                      <span ng-repeat="crawinner in craw.urlSerp">
+                        <p href="" ng-if="crawinner.urlCode == 'vz'">
+                          {{crawinner.serp}}
+                        </p>
+                      </span>
+                    </td>
+                    
+                    <td>
+                        <a href="#" ng-click="changeProducts('lg', 0, craw)">
+                         <serp-details obj-val="{{craw}}" case-val="ahead" >
+                        </serp-details>
+                        </a>
+                    </td>
+
+                    <td>
+                        <a href="#" ng-click="changeProducts('lg', 2, craw)">
+                          <serp-details obj-val="{{craw}}" case-val="newComp">
+                          </serp-details></a>
+                    
+                    </td>
+                    <td> <a href="#" ng-click="changeProducts('lg', 3, craw)"> 
+                      <serp-details obj-val="{{craw}}" case-val="behind">
+                        </serp-details></a>
+                      </td>
+                  </tr>
+               </tbody>
+               
+                <!-- <tbody>
+                  <tr dir-paginate="craw in keydata | filter: search | filter:q | 
+                  itemsPerPage: pageSize | filter:search as results"  current-page="currentPage" pagination-id="desktopPag">
+                    <td>  <a href="#" ng-click="changeProducts('lg', 1, craw)">
+                      {{craw.keyword}}
+                      </a>
+                    </td>
+                    
+                    <td class="tdw">
+                      <span ng-repeat="crawinner in craw.urlSerp">
+                        <a href="" ng-if="crawinner.Urlcode == 'vz'">
+                        {{crawinner.url}}
+                        </a>
+                      </span>
+                    </td>
+
+                    <td>{{page}}</td>
+                    <td>
+                     <span ng-repeat="crawinner in craw.urlSerp">
+                        <a href="" ng-if="crawinner.Urlcode == 'vz'" ng-click="changeProducts('lg', 0, craw)">
+                        {{crawinner.serp}}
+                        </a>
+                      </span>
+                    </td>
+
+                    <td>
+                        <a href="#" ng-click="changeProducts('lg', 2, craw)">Link</a>
+                    
+                    </td>
+                    <td> <a href="#" ng-click="changeProducts('lg', 3, craw)">22</a></td>
+                  </tr>
+                  
+                </tbody> -->
+              </table>
+
+               <div class="row">
+                  <div class="col-sm-6">
+                      <span>Showing 1 to {{pageSize}} of {{keyTot}} entries</span>
+                  </div>
+
+                  <div class="col-sm-6">
+                   <div class="pull-right" style="margin-top: -22px;">
+                    <dir-pagination-controls boundary-links="true" on-page-change="query(newPageNumber)"  max-size = '10' template-url="../app/views/directives/dirPagination.tpl.html"pagination-id="desktopPag"></dir-pagination-controls>
+                  </div>
+                  </div>
+              </div>
